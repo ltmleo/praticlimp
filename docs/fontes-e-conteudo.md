@@ -13,6 +13,10 @@ Verificação em 03/10/2026. O domínio [Pratic Limp](https://www.praticlimp.com
 | Telefone (19) 97416-3336 e adm@praticlimp.com.br | [Contato](https://luccatorres.wixsite.com/praticlimp/contato) | Telefone preservado; WhatsApp confirmado pelo usuário. |
 | Divelp, Bandini, Metalfarma, Fatex, Volcano, Sega | [Clientes](https://luccatorres.wixsite.com/praticlimp/clientes), galeria do modelo Wix | Logos recuperados, identificados como histórico de clientes; sem afirmar que todos são contratos atuais. |
 
+## Nota fiscal para conteúdo comercial
+
+O art. 311 do [Regulamento do Imposto de Renda (Decreto nº 9.580/2018)](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/decreto/d9580.htm) trata como operacionais as despesas necessárias à atividade e à manutenção da fonte produtora; os §§ 1º e 2º definem necessidade e uso normal/usual. A [Receita Federal](https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/declaracoes-e-demonstrativos/ecf/perguntas-e-respostas-pessoa-juridica-2020-arquivos/capitulo-viii-lucro-operacional-2020.pdf) também informa que a dedutibilidade depende da natureza, necessidade, normalidade e comprovação da despesa. Por isso, a página descreve a dedução no Lucro Real como condicionada às regras fiscais e à validação contábil. Ela não promete abatimento integral do valor do serviço no imposto.
+
 ## Ativos
 
 - `public/PRATIC LIMP 2026.svg`: versão 2026 do SVG fornecido pelo usuário, com caminhos vetoriais; é a fonte atual do logo do site.
