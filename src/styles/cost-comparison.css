@@ -1,0 +1,59 @@
+.cost-section{background:radial-gradient(ellipse at 95% 50%,#d4ebf577,transparent 50%),linear-gradient(140deg,#f4f8fa,#f5f9f1);border-bottom:1px solid #e1e9e7}
+.cost-heading{display:flex;justify-content:space-between;align-items:end;gap:48px;margin-bottom:40px}
+.cost-heading h2{margin:0;font-size:clamp(34px,3.4vw,48px)}
+.cost-heading>p{max-width:350px;margin-bottom:4px;color:#536b78;font-size:17px}
+.cost-diagram{display:grid;grid-template-columns:1.08fr 1fr;gap:22px;align-items:stretch}
+.cost-own,.cost-service{margin:0;padding:34px 36px;border-radius:28px;border:1px solid #fff;box-shadow:0 15px 32px #1b42550a,inset 0 1px 0 #fff;background:#ffffff9c;min-width:0}
+.cost-service{background:linear-gradient(145deg,#ffffffd6,#ecf5e9b5);border-color:#fff}
+.cost-kicker{font-size:13px;font-weight:650;letter-spacing:1.25px;margin-bottom:24px;color:#526e7d}
+.cost-salary{display:flex;align-items:center;gap:18px;padding:21px 24px;border-radius:17px;color:white;background:linear-gradient(120deg,#174766,#2b6885);box-shadow:0 8px 18px #1f537013}
+.cost-salary-icon{display:grid;place-items:center;width:48px;height:48px;flex-shrink:0;border:1px solid #ffffff38;border-radius:14px;background:#ffffff0f}
+.cost-salary h3{margin:0 0 3px;font-size:26px;line-height:1.2;letter-spacing:-.5px;font-weight:600}
+.cost-salary p{margin:0;font-size:15px;color:#dbeaf1}
+.cost-addition{height:43px;display:grid;place-items:center;position:relative}
+.cost-addition::before{content:'';position:absolute;inset:0 auto;width:1px;background:#c2d5df}
+.cost-addition span{z-index:1;display:grid;place-items:center;width:28px;height:28px;border-radius:50%;border:1px solid #d1e0e7;background:#f5f9fb;font-size:23px;line-height:1;color:#356783}
+.cost-extras{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;list-style:none;margin:0;padding:0}
+.cost-extras li{padding:18px 17px 17px;border:1px solid #d9e6ed;border-radius:15px;background:linear-gradient(140deg,#f2f7fa,#e9f2f6)}
+.cost-extras svg{color:#427994;margin-bottom:12px}
+.cost-extras h4{margin:0 0 7px;font-size:16px;font-weight:600;line-height:1.4;letter-spacing:-.2px}
+.cost-extras p{margin:0;font-size:14px;line-height:1.55;color:#576f7d}
+.cost-total-line{display:flex;align-items:center;gap:16px;margin-top:23px;padding-top:20px;border-top:1px solid #d2dfe5}
+.cost-total-line>span{font-size:27px;color:#527b91}
+.cost-total-line p{margin:0;font-size:16px;color:#546f7e;line-height:1.5}
+.cost-total-line strong{font-size:18px;font-weight:600;color:var(--ink)}
+.cost-service h3{font-size:27px;font-weight:600;letter-spacing:-.75px;line-height:1.3;margin-bottom:16px}
+.cost-service-intro{font-size:16px;line-height:1.7;color:#4d6b60;margin-bottom:24px}
+.cost-hub{position:relative;isolation:isolate;height:145px;max-width:290px;margin:-10px auto 24px}
+.cost-hub-orbit{position:absolute;inset:16px 33px 15px;border:1px solid #b1cdbd;border-radius:50%;transform:rotate(-12deg)}
+.cost-hub-orbit::after{content:'';position:absolute;inset:18px -19px;border:1px solid #c2d9d8;border-radius:50%;transform:rotate(24deg)}
+.cost-hub-mark{position:absolute;inset:26px auto auto calc(50% - 48px);height:96px;width:96px;display:grid;place-items:center;border:1px solid white;border-radius:29px;background:#ffffffb3;box-shadow:0 9px 25px #41665113,inset 0 1px 0 #fff;backdrop-filter:blur(12px)}
+.cost-hub-mark img{object-fit:contain}
+.cost-hub-node{position:absolute;display:grid;place-items:center;width:45px;height:45px;background:#fff;border:1px solid #deeadf;border-radius:50%;color:#347460;box-shadow:0 4px 12px #314c4310}
+.cost-node-people{left:10px;top:47px}.cost-node-clock{right:18px;top:4px}.cost-node-spark{right:8px;bottom:3px}
+.cost-included{list-style:none;display:grid;gap:14px;margin:0 0 22px;padding:0;font-size:16px;line-height:1.5;color:#2e5549}
+.cost-included li{display:flex;align-items:start;gap:10px}.cost-included svg{margin-top:3px;color:#468238;flex-shrink:0}
+.cost-scope{font-size:14px;line-height:1.7;color:#5a7169;margin:0;padding-top:18px;border-top:1px solid #d8e5d9}
+.cost-chart{margin:24px 0 0;padding:32px 36px 27px;border:1px solid #fff;border-radius:28px;background:linear-gradient(130deg,#ffffffcb,#ffffff8c);box-shadow:0 12px 30px #1b425507,inset 0 1px 0 #fff}
+.cost-chart h3{font-size:24px;line-height:1.4;letter-spacing:-.6px;font-weight:600;margin:0 0 28px}
+.cost-chart-rows{display:grid;gap:18px}
+.cost-chart-row{display:grid;grid-template-columns:155px minmax(0,1fr);align-items:center;gap:24px;min-width:0}
+.cost-row-label{font-size:16px;font-weight:550;line-height:1.4;color:#35586b}.cost-row-pratic{color:#4b722d}
+.cost-track{position:relative;padding-block:10px;border-left:1px solid #bdcfd8;background:repeating-linear-gradient(to right,transparent 0,transparent calc(25% - 1px),#dde7eb 25%);min-width:0}
+.cost-stacked-bar{display:flex;height:35px;width:100%;border-radius:0 6px 6px 0;overflow:hidden;box-shadow:0 3px 7px #23485709}
+.cost-segment{display:block;height:100%;border-right:1px solid #ffffff45;min-width:0}.cost-segment:last-child{border-right:0}
+.cost-tone-salary{background:#174766}.cost-tone-charges{background:#34789d}.cost-tone-vacation{background:#5398bb}.cost-tone-coverage{background:#82afc5}.cost-tone-supplies{background:#a9c9da}.cost-tone-other{background:#cfdee7}
+/* Decorative proportions only: no prices, rates or measured savings. */
+.cost-segment.cost-tone-salary{flex:42}.cost-segment.cost-tone-charges{flex:18}.cost-segment.cost-tone-vacation{flex:12}.cost-segment.cost-tone-coverage{flex:9}.cost-segment.cost-tone-supplies{flex:11}.cost-segment.cost-tone-other{flex:8}
+.cost-pratic-bar{height:35px;width:62%;border-radius:0 6px 6px 0;background:linear-gradient(100deg,#769d38,#a8c862);box-shadow:0 3px 7px #46652b0d}
+.cost-chart-legend{display:flex;flex-wrap:wrap;gap:13px 24px;list-style:none;padding:0;margin:24px 0 0;font-size:14px;line-height:1.5;color:#496573}
+.cost-chart-legend li{display:flex;align-items:center;gap:8px}.cost-swatch{display:block;width:11px;height:11px;border-radius:2px;flex-shrink:0}
+.cost-chart-caption{border-top:1px solid #dbe6e5;margin-top:23px;padding-top:18px}
+.cost-chart-caption p{font-size:13px;line-height:1.7;color:#596f79;margin:0}
+.cost-chart-caption .cost-other-note{font-size:14px;color:#375868;margin-bottom:7px}.cost-other-note strong{font-weight:600}
+.cost-action{display:flex;align-items:center;justify-content:space-between;gap:30px;margin-top:36px}
+.cost-action h3{font-size:23px;letter-spacing:-.5px;margin-bottom:8px;line-height:1.4}.cost-action p{font-size:16px;color:#59717e;margin:0}.cost-action .button{white-space:nowrap}
+@media(max-width:1000px){.cost-heading{gap:25px}.cost-heading>p{max-width:285px;font-size:16px}.cost-diagram{gap:16px}.cost-own,.cost-service{padding:28px 23px}.cost-extras li{padding:16px 13px}.cost-service h3{font-size:25px}.cost-chart{padding-inline:28px}}
+@media(max-width:700px){.cost-heading{display:block;margin-bottom:28px}.cost-heading h2{font-size:35px;letter-spacing:-1.5px}.cost-heading>p{max-width:480px;margin:20px 0 0}.cost-diagram{grid-template-columns:1fr;gap:20px}.cost-own,.cost-service{padding:25px 22px;border-radius:24px}.cost-kicker{font-size:12px;margin-bottom:20px}.cost-salary{padding:20px 17px;gap:13px}.cost-salary h3{font-size:25px}.cost-salary p{font-size:14px}.cost-extras{gap:8px}.cost-extras h4{font-size:16px}.cost-extras p{font-size:14px}.cost-hub{margin-block:0 22px}.cost-service h3{font-size:27px}.cost-chart{padding:25px 22px 22px;border-radius:24px;margin-top:20px}.cost-chart h3{font-size:23px;margin-bottom:23px}.cost-chart-rows{gap:20px}.cost-chart-row{grid-template-columns:1fr;gap:7px}.cost-track{padding-block:8px}.cost-stacked-bar,.cost-pratic-bar{height:30px}.cost-chart-legend{gap:12px 20px;margin-top:23px}.cost-action{align-items:start;flex-direction:column;gap:20px}.cost-action h3{font-size:23px}.cost-action .button{min-height:52px}}
+@media(max-width:360px){.cost-own,.cost-service,.cost-chart{padding-inline:18px}.cost-extras{grid-template-columns:1fr}.cost-extras li{display:grid;grid-template-columns:23px 1fr;column-gap:12px;padding:15px}.cost-extras svg{grid-row:span 2;margin-top:1px}.cost-extras h4{margin-bottom:4px}.cost-salary-icon{width:40px;height:44px}.cost-total-line strong{font-size:17px}}
+@media(prefers-reduced-transparency:reduce){.cost-own,.cost-service,.cost-chart{background:#f8fbfc}.cost-hub-mark{backdrop-filter:none;background:#fff}}

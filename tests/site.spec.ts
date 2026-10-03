@@ -3,7 +3,7 @@ import { test, expect } from '@playwright/test';
 test('home, filters, FAQ and qualified WhatsApp message',async({page})=>{
  const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));
  await page.goto('/');
- await expect(page.getByRole('heading',{level:1})).toContainText('sua rotina');
+ await expect(page.getByRole('heading',{level:1})).toContainText('em boas mãos');
  await expect(page.locator('.service')).toHaveCount(5);
  await page.getByRole('button',{name:/Limpeza especializada/}).click();
  await expect(page.locator('.service')).toHaveCount(3);
@@ -12,7 +12,7 @@ test('home, filters, FAQ and qualified WhatsApp message',async({page})=>{
  await page.getByLabel('Seu nome',{exact:true}).fill('Cliente de teste');
  await page.getByLabel('Telefone com DDD').fill('(19) 99999-1234');
  await page.getByLabel('Cidade',{exact:true}).fill('Campinas');
- await page.getByRole('button',{name:'Preparar meu orçamento'}).click();
+ await page.getByRole('button',{name:'Preparar mensagem'}).click();
  const href=await page.locator('#send-quote').getAttribute('href');
  expect(href).toContain('https://wa.me/5519974163336?text=');
  expect(decodeURIComponent(href!)).toContain('Serviço: Limpeza pós-obra');
@@ -32,9 +32,9 @@ test('mobile layout, navigation, validation and reduced motion',async({page})=>{
  await expect(page.locator('.floating-contact')).toHaveCSS('width','52px');
  await page.getByRole('button',{name:'Abrir menu'}).click();
  await expect(page.locator('#menu')).toBeVisible();
- await page.locator('#menu').getByText('Soluções',{exact:true}).click();
+ await page.locator('#menu').getByText('Serviços',{exact:true}).click();
  await expect(page.getByRole('button',{name:'Abrir menu'})).toHaveAttribute('aria-expanded','false');
- await page.getByRole('button',{name:'Preparar meu orçamento'}).click();
+ await page.getByRole('button',{name:'Preparar mensagem'}).click();
  await expect(page.locator('#send-quote')).toHaveCount(0);
  for(const width of [320,390,768,1440]){
   await page.setViewportSize({width,height:900});
@@ -44,6 +44,7 @@ test('mobile layout, navigation, validation and reduced motion',async({page})=>{
  await page.goto('/');
  await page.locator('img').evaluateAll(images=>Promise.all(images.map(img=>{img.loading='eager';return img.decode().catch(()=>{})})));
  await page.screenshot({path:'test-results/mobile.png',fullPage:true,animations:'disabled'});
+ await page.locator('.cost-section').screenshot({path:'test-results/cost-comparison-mobile.png',animations:'disabled'});
 });
 
 test('desktop imagery and static privacy page',async({page})=>{
@@ -53,6 +54,7 @@ test('desktop imagery and static privacy page',async({page})=>{
  await expect(page.locator('header .brand img')).toHaveAttribute('src','/brand/pratic-limp.svg');
  await page.locator('img').evaluateAll(images=>Promise.all(images.map(img=>{img.loading='eager';return img.decode().catch(()=>{})})));
  await page.screenshot({path:'test-results/desktop.png',fullPage:true,animations:'disabled'});
+ await page.locator('.cost-section').screenshot({path:'test-results/cost-comparison-desktop.png',animations:'disabled'});
  await page.goto('/privacidade/');
  await expect(page.getByRole('heading',{level:1})).toHaveText('Sua privacidade');
 });
@@ -63,7 +65,7 @@ test('HTML contains main content without JavaScript',async({browser})=>{
  await expect(page.getByRole('heading',{level:1})).toBeVisible();
  await expect(page.locator('.service').first()).toBeVisible();
  await expect(page.locator('.service').first()).toHaveCSS('opacity','1');
- await expect(page.getByRole('button',{name:'Preparar meu orçamento'})).toBeDisabled();
+ await expect(page.getByRole('button',{name:'Preparar mensagem'})).toBeDisabled();
  await expect(page.getByRole('link',{name:'nosso WhatsApp'})).toBeVisible();
  await context.close();
 });

@@ -1,17 +1,17 @@
 // Source ledger: docs/fontes-e-conteudo.md. No unsupported factual claims.
 export const services = [
- {id:'terceirizacao',name:'Terceirização de limpeza',category:'empresarial',number:'01',icon:'building',tag:'PARA EMPRESAS',text:'Profissionais de limpeza em período integral ou meio período. Equipe uniformizada e treinada, com materiais, produtos e equipamentos para a execução do serviço.',details:['Período integral ou meio período','Colaboradores treinados e uniformizados','Contrato com vigência mensal']},
- {id:'pos-obra',name:'Limpeza pós-obra',category:'especializado',number:'02',icon:'home',tag:'DEPOIS DA OBRA, UM NOVO COMEÇO',text:'Limpeza ao final de construções e reformas de pequeno, médio ou grande porte. Atendimento a construtoras, arquitetos e pessoas físicas.',details:[]},
- {id:'vidros',name:'Limpeza de vidros',category:'especializado',number:'03',icon:'spark',tag:'CUIDADO EM CADA SUPERFÍCIE',text:'Limpeza profissional de vidros com responsabilidade e cuidado na execução.',details:[]},
- {id:'pisos',name:'Tratamento de pisos e pedras',category:'especializado',number:'04',icon:'shield',tag:'CONSERVAÇÃO QUE VALORIZA',text:'Limpeza, impermeabilização e remoção de ceras e sujeiras acumuladas. Tratamento de ardósia, granito, porcelanato, cerâmica, granilite e outros materiais.',details:[]},
- {id:'cobertura',name:'Cobertura de ausências',category:'empresarial',number:'05',icon:'people',tag:'CONTINUIDADE PARA SUA ROTINA',text:'Soluções para cobrir férias, faltas e afastamentos de funcionários de outras empresas.',details:[]},
+ {id:'terceirizacao',name:'Terceirização de limpeza',category:'empresarial',number:'01',icon:'building',tag:'LIMPEZA DO DIA A DIA',text:'Tenha profissionais treinados e uniformizados para a limpeza da sua empresa. A contratação pode ser em meio período ou período integral, com materiais e equipamentos conforme o serviço.',details:['Período integral ou meio período','Colaboradores treinados e uniformizados','Contrato com vigência mensal']},
+ {id:'pos-obra',name:'Limpeza pós-obra',category:'especializado',number:'02',icon:'home',tag:'ENTREGA DE OBRAS E REFORMAS',text:'Terminou uma obra ou reforma? Fazemos a limpeza para a entrega do espaço. Atendemos construtoras, arquitetos e pessoas físicas, em obras de diferentes portes.',details:[]},
+ {id:'vidros',name:'Limpeza de vidros',category:'especializado',number:'03',icon:'spark',tag:'VIDROS BEM CUIDADOS',text:'Limpeza de vidros para cuidar da apresentação do seu espaço. Conte à equipe o que precisa ser limpo para solicitar uma proposta.',details:[]},
+ {id:'pisos',name:'Tratamento de pisos e pedras',category:'especializado',number:'04',icon:'shield',tag:'CONSERVAÇÃO DE PISOS',text:'Limpeza, impermeabilização e remoção de ceras e sujeiras acumuladas. Trabalhamos com ardósia, granito, porcelanato, cerâmica, granilite e outros materiais.',details:[]},
+ {id:'cobertura',name:'Cobertura de ausências',category:'empresarial',number:'05',icon:'people',tag:'FÉRIAS, FALTAS E AFASTAMENTOS',text:'Precisa cobrir férias, faltas ou afastamentos da sua equipe de limpeza? A Pratic Limp oferece esse serviço para empresas que já têm funcionários próprios.',details:[]},
 ];
 export const faq = [
- ['É possível contratar por meio período?', 'Sim. A Pratic Limp oferece terceirização de limpeza em período integral ou meio período. Fale com a equipe para alinhar a necessidade da sua empresa.'],
- ['Como funciona a substituição de profissionais?', 'A empresa prevê substituições em caso de faltas, afastamentos, férias ou por solicitação do cliente. Consulte as condições para a sua contratação.'],
- ['A empresa trabalha com materiais e equipamentos?', 'Sim. A execução dos serviços inclui o uso de materiais, produtos e equipamentos. Os detalhes do serviço devem ser alinhados na proposta.'],
- ['Quais serviços especializados estão disponíveis?', 'Limpeza pós-obra, limpeza de vidros e tratamento de pisos e pedras, incluindo limpeza, impermeabilização e remoção de ceras e sujeiras acumuladas.'],
- ['Como solicito um orçamento?', 'Preencha o formulário e revise a mensagem antes de continuar no WhatsApp. Você também pode ligar para (19) 97416-3336 ou enviar um e-mail para adm@praticlimp.com.br. Informe sua cidade para consultar a disponibilidade de atendimento.'],
+ ['Vocês atendem em meio período?', 'Sim. Você pode contratar a limpeza em meio período ou período integral. Conte como funciona a sua empresa para conversar com a equipe sobre o período de trabalho.'],
+ ['E se o profissional faltar?', 'A Pratic Limp prevê substituições em casos de faltas, férias e afastamentos, ou por solicitação do cliente. Na proposta, confirme como funciona a reposição para o seu local.'],
+ ['Materiais e equipamentos estão incluídos?', 'A Pratic Limp trabalha com materiais, produtos e equipamentos para a execução da limpeza. Peça que a proposta detalhe o que está incluído no seu serviço.'],
+ ['Vocês também fazem serviços pontuais?', 'Sim. Fazemos limpeza pós-obra, limpeza de vidros e tratamento de pisos e pedras. Esse tratamento inclui limpeza, impermeabilização e remoção de ceras e sujeiras acumuladas.'],
+ ['Como peço um orçamento?', 'Informe a cidade, o serviço e um pouco sobre o local. O formulário prepara uma mensagem para você revisar e enviar pelo WhatsApp. Se preferir, ligue para (19) 97416-3336 ou escreva para adm@praticlimp.com.br.'],
 ];
 export const clients = [
  {name:'Divelp',file:'divelp.png'}, {name:'Bandini',file:'bandini.jpg'},

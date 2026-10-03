@@ -13,9 +13,20 @@ Verificação em 03/10/2026. O domínio [Pratic Limp](https://www.praticlimp.com
 | Telefone (19) 97416-3336 e adm@praticlimp.com.br | [Contato](https://luccatorres.wixsite.com/praticlimp/contato) | Telefone preservado; WhatsApp confirmado pelo usuário. |
 | Divelp, Bandini, Metalfarma, Fatex, Volcano, Sega | [Clientes](https://luccatorres.wixsite.com/praticlimp/clientes), galeria do modelo Wix | Logos recuperados, identificados como histórico de clientes; sem afirmar que todos são contratos atuais. |
 
-## Nota fiscal para conteúdo comercial
+## Pesquisa fiscal interna
 
-O art. 311 do [Regulamento do Imposto de Renda (Decreto nº 9.580/2018)](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/decreto/d9580.htm) trata como operacionais as despesas necessárias à atividade e à manutenção da fonte produtora; os §§ 1º e 2º definem necessidade e uso normal/usual. A [Receita Federal](https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/declaracoes-e-demonstrativos/ecf/perguntas-e-respostas-pessoa-juridica-2020-arquivos/capitulo-viii-lucro-operacional-2020.pdf) também informa que a dedutibilidade depende da natureza, necessidade, normalidade e comprovação da despesa. Por isso, a página descreve a dedução no Lucro Real como condicionada às regras fiscais e à validação contábil. Ela não promete abatimento integral do valor do serviço no imposto.
+O art. 311 do [Regulamento do Imposto de Renda (Decreto nº 9.580/2018)](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/decreto/d9580.htm) trata como operacionais as despesas necessárias à atividade e à manutenção da fonte produtora; os §§ 1º e 2º definem necessidade e uso normal/usual. A [Receita Federal](https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/declaracoes-e-demonstrativos/ecf/perguntas-e-respostas-pessoa-juridica-2020-arquivos/capitulo-viii-lucro-operacional-2020.pdf) também informa que a dedutibilidade depende da natureza, necessidade, normalidade e comprovação da despesa. Essa pesquisa fica registrada aqui para consulta interna. A seção pública se concentra na composição do custo da limpeza e não apresenta argumentos fiscais.
+
+## Textos e comparação de custos
+
+A copy usa a voz da Pratic Limp para falar com quem administra uma empresa, com base nos valores institucionais de transparência, responsabilidade, agilidade e confiança. Serviços, modalidades de contratação e condições de reposição seguem as fontes acima.
+
+A seção mantém os dois painéis anteriores: composição do custo da equipe própria e estrutura oferecida pela Pratic Limp. Abaixo, um gráfico de barras horizontais segue a referência visual fornecida pelo usuário. A barra da equipe própria reúne salário, encargos e benefícios, férias e 13º, cobertura de ausências, produtos e equipamentos, além de “Outros*”: contratação, treinamento, desligamento e eventuais custos judiciais. A barra da Pratic Limp é visualmente menor, conforme solicitado. Segmentos e comprimentos são apenas ilustrativos, sem dados financeiros associados. A legenda esclarece que a comparação não tem escala de valores e que a economia depende dos custos da empresa e da proposta. Não há valores, percentuais publicados, calculadora ou garantia de economia.
+
+A página convida o visitante a comparar uma proposta com o custo completo da equipe própria. O painel da Pratic Limp apresenta os serviços confirmados na fonte, sem afirmar que eventuais obrigações ou riscos judiciais desaparecem com a terceirização. Período de trabalho, itens incluídos e condições de reposição devem ser definidos na proposta.
+
+Permanecem pendentes de confirmação pelos proprietários: valor mensal fixo, regras de reajuste, prazo de reposição e comparações reais de economia que possam ser divulgadas. Essas afirmações não são usadas no site.
+
 
 ## Ativos
 
