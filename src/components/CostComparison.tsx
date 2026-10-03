@@ -1,3 +1,4 @@
+import { motion, useReducedMotion } from 'motion/react';
 import Icon from './Icon';
 import '../styles/cost-comparison.css';
 
@@ -18,6 +19,10 @@ const chartItems = [
 ];
 
 export default function CostComparison({ onRequestQuote }: { onRequestQuote: () => void }) {
+  const reducedMotion = useReducedMotion();
+  const fillBar = reducedMotion ? undefined : { transform: ['scaleX(0)', 'scaleX(1)'] };
+  const fillTransition = { duration: 1.25, ease: [0.22, 1, 0.36, 1] as const };
+
   return (
     <section className="cost-section section" id="vale-a-pena" aria-labelledby="cost-heading">
       <div className="container">
@@ -78,14 +83,14 @@ export default function CostComparison({ onRequestQuote }: { onRequestQuote: () 
             <div className="cost-chart-row">
               <span className="cost-row-label">Equipe própria</span>
               <div className="cost-track" aria-hidden="true">
-                <div className="cost-stacked-bar">
+                <motion.div className="cost-stacked-bar" initial={false} whileInView={fillBar} viewport={{ once: true, amount: 0.8 }} transition={fillTransition}>
                   {chartItems.map(item => <span key={item.id} className={`cost-segment cost-tone-${item.id}`}/>)}
-                </div>
+                </motion.div>
               </div>
             </div>
             <div className="cost-chart-row">
               <span className="cost-row-label cost-row-pratic">Pratic Limp</span>
-              <div className="cost-track" aria-hidden="true"><div className="cost-pratic-bar"/></div>
+              <div className="cost-track" aria-hidden="true"><motion.div className="cost-pratic-bar" initial={false} whileInView={fillBar} viewport={{ once: true, amount: 0.8 }} transition={{ ...fillTransition, delay: 0.18 }}/></div>
             </div>
           </div>
           <ul className="cost-chart-legend" aria-label="Componentes do custo da equipe própria">

@@ -41,6 +41,7 @@
 .cost-row-label{font-size:16px;font-weight:550;line-height:1.4;color:#35586b}.cost-row-pratic{color:#4b722d}
 .cost-track{position:relative;padding-block:10px;border-left:1px solid #bdcfd8;background:repeating-linear-gradient(to right,transparent 0,transparent calc(25% - 1px),#dde7eb 25%);min-width:0}
 .cost-stacked-bar{display:flex;height:35px;width:100%;border-radius:0 6px 6px 0;overflow:hidden;box-shadow:0 3px 7px #23485709}
+.cost-stacked-bar,.cost-pratic-bar{transform-origin:left center}
 .cost-segment{display:block;height:100%;border-right:1px solid #ffffff45;min-width:0}.cost-segment:last-child{border-right:0}
 .cost-tone-salary{background:#174766}.cost-tone-charges{background:#34789d}.cost-tone-vacation{background:#5398bb}.cost-tone-coverage{background:#82afc5}.cost-tone-supplies{background:#a9c9da}.cost-tone-other{background:#cfdee7}
 /* Decorative proportions only: no prices, rates or measured savings. */
