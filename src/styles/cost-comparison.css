@@ -36,14 +36,15 @@
 .cost-scope{font-size:14px;line-height:1.7;color:#5a7169;margin:0;padding-top:18px;border-top:1px solid #d8e5d9}
 .cost-chart{margin:24px 0 0;padding:32px 36px 27px;border:1px solid #fff;border-radius:28px;background:linear-gradient(130deg,#ffffffcb,#ffffff8c);box-shadow:0 12px 30px #1b425507,inset 0 1px 0 #fff}
 .cost-chart h3{font-size:24px;line-height:1.4;letter-spacing:-.6px;font-weight:600;margin:0 0 28px}
+.cost-axis-label{margin:0 0 8px;text-align:right;font-size:14px;font-weight:500;line-height:1.5;color:#62676c}
 .cost-chart-rows{display:grid;gap:18px}
 .cost-chart-row{display:grid;grid-template-columns:155px minmax(0,1fr);align-items:center;gap:24px;min-width:0}
-.cost-row-label{font-size:16px;font-weight:550;line-height:1.4;color:#35586b}.cost-row-pratic{color:#4b722d}
+.cost-row-label{font-size:16px;font-weight:550;line-height:1.4;color:#62676c}.cost-row-pratic{color:#4b722d}
 .cost-track{position:relative;padding-block:10px;border-left:1px solid #bdcfd8;background:repeating-linear-gradient(to right,transparent 0,transparent calc(25% - 1px),#dde7eb 25%);min-width:0}
 .cost-stacked-bar{display:flex;height:35px;width:100%;border-radius:0 6px 6px 0;overflow:hidden;box-shadow:0 3px 7px #23485709}
 .cost-stacked-bar,.cost-pratic-bar{transform-origin:left center}
 .cost-segment{display:block;height:100%;border-right:1px solid #ffffff45;min-width:0}.cost-segment:last-child{border-right:0}
-.cost-tone-salary{background:#174766}.cost-tone-charges{background:#34789d}.cost-tone-vacation{background:#5398bb}.cost-tone-coverage{background:#82afc5}.cost-tone-supplies{background:#a9c9da}.cost-tone-other{background:#cfdee7}
+.cost-tone-salary{background:#60656a}.cost-tone-charges{background:#7c8186}.cost-tone-vacation{background:#989da1}.cost-tone-coverage{background:#b0b4b7}.cost-tone-supplies{background:#c5c8ca}.cost-tone-other{background:#dadddf}
 /* Decorative proportions only: no prices, rates or measured savings. */
 .cost-segment.cost-tone-salary{flex:42}.cost-segment.cost-tone-charges{flex:18}.cost-segment.cost-tone-vacation{flex:12}.cost-segment.cost-tone-coverage{flex:9}.cost-segment.cost-tone-supplies{flex:11}.cost-segment.cost-tone-other{flex:8}
 .cost-pratic-bar{height:35px;width:62%;border-radius:0 6px 6px 0;background:linear-gradient(100deg,#769d38,#a8c862);box-shadow:0 3px 7px #46652b0d}

@@ -78,19 +78,20 @@ export default function CostComparison({ onRequestQuote }: { onRequestQuote: () 
         </div>
 
         <figure className="cost-chart" aria-labelledby="cost-chart-heading" aria-describedby="cost-illustration">
-          <h3 id="cost-chart-heading">Do salário ao custo total</h3>
+          <h3 id="cost-chart-heading">Na ponta do lápis, compensa muito!</h3>
+          <p className="cost-axis-label">Valor (R$)</p>
           <div className="cost-chart-rows">
+            <div className="cost-chart-row">
+              <span className="cost-row-label cost-row-pratic">Pratic Limp</span>
+              <div className="cost-track" aria-hidden="true"><motion.div className="cost-pratic-bar" initial={false} whileInView={fillBar} viewport={{ once: true, amount: 0.8 }} transition={fillTransition}/></div>
+            </div>
             <div className="cost-chart-row">
               <span className="cost-row-label">Equipe própria</span>
               <div className="cost-track" aria-hidden="true">
-                <motion.div className="cost-stacked-bar" initial={false} whileInView={fillBar} viewport={{ once: true, amount: 0.8 }} transition={fillTransition}>
+                <motion.div className="cost-stacked-bar" initial={false} whileInView={fillBar} viewport={{ once: true, amount: 0.8 }} transition={{ ...fillTransition, delay: 0.18 }}>
                   {chartItems.map(item => <span key={item.id} className={`cost-segment cost-tone-${item.id}`}/>)}
                 </motion.div>
               </div>
-            </div>
-            <div className="cost-chart-row">
-              <span className="cost-row-label cost-row-pratic">Pratic Limp</span>
-              <div className="cost-track" aria-hidden="true"><motion.div className="cost-pratic-bar" initial={false} whileInView={fillBar} viewport={{ once: true, amount: 0.8 }} transition={{ ...fillTransition, delay: 0.18 }}/></div>
             </div>
           </div>
           <ul className="cost-chart-legend" aria-label="Componentes do custo da equipe própria">
