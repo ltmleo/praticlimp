@@ -1,24 +1,27 @@
 # Pratic Limp
 
-Site estático em **React + Vite + TypeScript + Motion**, com pré-renderização de HTML durante a compilação.
+Site estático em React, Vite, TypeScript e Motion, com HTML pré-renderizado.
 
 ```sh
 npm install
 npm run dev
 npm run build
 npm run preview
+npm test
 ```
 
-Publicar apenas `dist/` em uma hospedagem estática. Não há backend em produção. A home e `/privacidade/` são geradas com conteúdo HTML antes da hidratação React.
+Publicar somente `dist/`. Home e `/privacidade/` são geradas no build; não é necessário backend em produção. `npm test` usa Chrome instalado e inicia uma prévia em `http://localhost:4173`.
 
-- Estratégia e textos: [PROPOSTA-CRO.md](./PROPOSTA-CRO.md).
-- Contatos e informações pendentes: `src/data/company.ts`.
-- Interface: `src/App.tsx`, `src/components/QuoteForm.tsx` e `src/styles/global.css`.
-- WhatsApp confirmado: `5519974163336`. O formulário prepara uma mensagem e só o usuário a envia no aplicativo. Sem banco de dados, armazenamento local ou envio automático.
-- Fotos ilustrativas do Unsplash e fontes do Google Fonts requerem conexão. Não representam clientes da empresa.
-- Analytics/Meta Pixel/Hotjar não estão instalados. Planejamento de tracking e cuidados com dados constam na proposta.
-- Não há números de prova social inventados. Confirmar cobertura, CNPJ, endereço, modalidades, depoimentos e fotos reais antes de publicar.
+- `src/data/content.ts`: serviços e perguntas baseados no site original.
+- `src/data/company.ts`: contatos. WhatsApp confirmado pelo usuário.
+- `src/styles/global.css` e `glass.css`: layout e superfícies translúcidas.
+- `public/brand/pratic-limp.svg`: logo completo derivado do SVG fornecido.
+- `public/brand/pratic-limp-gota.svg`: símbolo isolado; também aplicado em `public/favicon.svg`.
+- `docs/fontes-e-conteudo.md`: registro de fontes, ativos e informações não confirmadas.
+- `PROPOSTA-CRO.md`: arquitetura, copywriting, UX e plano de mensuração.
 
-## Verificação
+`scripts/prepare-logo.mjs` reproduz o enquadramento do logo e a extração da gota a partir de `public/Logo vetorizado.svg`, preservando o original.
 
-`npm run build` executa TypeScript, Vite e a pré-renderização. `npm test` executa os testes de navegador, usando Chrome instalado. A configuração de Playwright inicia a prévia em `http://localhost:4173`.
+O formulário prepara uma mensagem no navegador e abre o WhatsApp para confirmação. Sem banco de dados, envio automático, armazenamento local ou rastreadores. Sem JavaScript, links de telefone/WhatsApp continuam disponíveis e o botão do formulário permanece desabilitado.
+
+Imagens institucionais estão locais. Fontes usam Google Fonts. Nenhuma imagem gerada por IA integra a página. CNPJ, endereço e cobertura aguardam dados confirmados. A versão não foi publicada em produção.

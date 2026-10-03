@@ -1,6 +1,7 @@
 import { hydrateRoot, createRoot } from 'react-dom/client';
 import App from './App';
 import './styles/global.css';
+import './styles/glass.css';
 const root = document.getElementById('root')!;
 const app = <App privacy={window.location.pathname.startsWith('/privacidade')} />;
 if (root.hasChildNodes()) hydrateRoot(root, app);

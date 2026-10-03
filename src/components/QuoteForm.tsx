@@ -2,6 +2,7 @@ import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { company } from '../data/company';
 import Icon from './Icon';
+import { services } from '../data/content';
 export default function QuoteForm({selectedService}:{selectedService:string}) {
  const [service,setService]=useState('');
  const [message,setMessage]=useState('');
@@ -18,7 +19,7 @@ export default function QuoteForm({selectedService}:{selectedService:string}) {
  <h3>Seu espaço merece esse cuidado.</h3><p>Preencha os dados para preparar sua solicitação.</p>
  <label htmlFor="name">Seu nome</label><input id="name" name="name" autoComplete="name" placeholder="Como podemos chamar você?" required pattern=".*\S.*" maxLength={100}/>
  <div className="form-row"><div><label htmlFor="phone">Telefone com DDD</label><input id="phone" name="phone" type="tel" autoComplete="tel" placeholder="(19) 99999-9999" required maxLength={20} onInput={event=>{const field=event.currentTarget;const digits=field.value.replace(/\D/g,'');field.setCustomValidity(digits.length>=10&&digits.length<=13?'':'Informe um telefone válido com DDD.')}}/></div><div><label htmlFor="city">Cidade</label><input id="city" name="city" autoComplete="address-level2" placeholder="Sua cidade" required pattern=".*\S.*" maxLength={100}/></div></div>
- <label htmlFor="service">Qual solução você procura?</label><select id="service" name="service" value={service} onChange={e=>setService(e.target.value)} required><option value="">Selecione um serviço</option>{['Limpeza corporativa','Limpeza de condomínios','Limpeza pós-obra','Terceirização de limpeza','Limpeza residencial','Limpeza industrial / outra necessidade'].map(s=><option key={s}>{s}</option>)}</select>
+ <label htmlFor="service">Qual solução você procura?</label><select id="service" name="service" value={service} onChange={e=>setService(e.target.value)} required><option value="">Selecione um serviço</option>{services.map(s=><option key={s.id}>{s.name}</option>)}<option>Quero orientação sobre o serviço</option></select>
  <label htmlFor="message">Conte um pouco sobre o espaço <span>(opcional)</span></label><textarea id="message" name="message" rows={3} placeholder="Tipo de ambiente, área aproximada, frequência desejada…" maxLength={1000}/>
  <p className="privacy-note">Seus dados serão incluídos apenas na mensagem que você decidir enviar. <a href="/privacidade/">Saiba mais</a>.</p>
  <motion.button disabled={!ready} whileTap={{scale:0.98}} className="button" type="submit">Preparar meu orçamento <Icon name="arrow" size={19}/></motion.button>
