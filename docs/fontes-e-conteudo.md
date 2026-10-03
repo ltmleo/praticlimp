@@ -32,6 +32,7 @@ Permanecem pendentes de confirmação pelos proprietários: valor mensal fixo, r
 
 - `public/PRATIC LIMP 2026.svg`: versão 2026 do SVG fornecido pelo usuário, com caminhos vetoriais; é a fonte atual do logo do site.
 - `public/brand/pratic-limp.svg`: derivado do SVG fornecido, apenas com enquadramento ajustado. Desenho e cores preservados.
+- `public/brand/pratic-limp-horizontal.svg`: versão para telas de até 620 px, com a gota à esquerda e o lettering à direita. Usa os mesmos caminhos vetoriais e cores do logo 2026, reorganizados para o cabeçalho e o rodapé mobile.
 - `public/brand/pratic-limp-gota.svg`: símbolo extraído dos caminhos da gota do mesmo SVG, sem lettering e com área quadrada transparente.
 - `public/favicon.svg`: a mesma gota, para uso no navegador.
 - `public/brand/logo_vazado.svg`: arquivo preexistente com PNG embutido; preservado, mas não utilizado como logo vetorial.
