@@ -24,6 +24,8 @@ Publicar somente `dist/`. Home e `/privacidade/` são geradas no build; não é 
 
 O formulário prepara uma mensagem no navegador e abre o WhatsApp para confirmação. Sem banco de dados, envio automático ou armazenamento local. O Google Analytics 4 está ativo com a propriedade `G-HTV2EWQWDX`; Meta Pixel e Hotjar não estão instalados. Sem JavaScript, links de telefone/WhatsApp continuam disponíveis e o botão do formulário permanece desabilitado.
 
-O workflow `.github/workflows/deploy-pages.yml` compila e publica `dist/` no GitHub Pages em cada push para `main`. O arquivo `public/CNAME` configura `www.praticlimp.com.br` como domínio personalizado.
+O workflow `.github/workflows/deploy-pages.yml` compila e publica `dist/` no GitHub Pages em cada push para `main`. Durante a homologação ele define `VITE_BASE_PATH=/praticlimp/`, compatível com `https://ltmleo.github.io/praticlimp/`.
+
+Quando o domínio personalizado for ativado, altere `VITE_BASE_PATH` para `/` e crie `public/CNAME` contendo `www.praticlimp.com.br`. Essa troca deve acompanhar a configuração de DNS e de domínio no GitHub Pages.
 
 Imagens institucionais estão locais. Fontes usam Google Fonts. Nenhuma imagem gerada por IA integra a página. CNPJ, endereço e cobertura aguardam dados confirmados. A versão não foi publicada em produção.
