@@ -82,7 +82,7 @@ Metas de campo no percentil 75: LCP até 2,5 s, INP até 200 ms e CLS até 0,1. 
 | Hotjar | Amostragem limitada para identificar fricção; mascarar campos e excluir a mensagem de orçamento. |
 | CRM ou planilha comercial | Confirmar recebimento, qualificação, proposta e fechamento. É a fonte para qualidade real dos leads. |
 
-Não há rastreadores ativos. Não enviar nome, telefone, cidade detalhada, texto livre ou URL completa de WhatsApp para analytics: o parâmetro `text` contém dados pessoais. Filtrar eventos automáticos de links externos se coletarem esse endereço.
+O Google Analytics 4 está ativo com a propriedade `G-HTV2EWQWDX`. Meta Pixel e Hotjar não estão ativos. Não enviar nome, telefone, cidade detalhada, texto livre ou URL completa de WhatsApp para analytics: o parâmetro `text` contém dados pessoais. Filtrar eventos automáticos de links externos se coletarem esse endereço.
 
 GA4 recomenda `generate_lead` para solicitação enviada. Preparar a mensagem ou abrir o WhatsApp não comprova envio; registrar essa conversão apenas com confirmação adequada. [Eventos recomendados do GA4](https://support.google.com/analytics/answer/9267735).
 

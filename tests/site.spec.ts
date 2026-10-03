@@ -28,6 +28,8 @@ test('mobile layout, navigation, validation and reduced motion',async({page})=>{
  await page.setViewportSize({width:390,height:844});
  await page.emulateMedia({reducedMotion:'reduce'});
  await page.goto('/');
+ await expect(page.locator('.floating-contact span')).toBeHidden();
+ await expect(page.locator('.floating-contact')).toHaveCSS('width','52px');
  await page.getByRole('button',{name:'Abrir menu'}).click();
  await expect(page.locator('#menu')).toBeVisible();
  await page.locator('#menu').getByText('Soluções',{exact:true}).click();
@@ -64,4 +66,11 @@ test('HTML contains main content without JavaScript',async({browser})=>{
  await expect(page.getByRole('button',{name:'Preparar meu orçamento'})).toBeDisabled();
  await expect(page.getByRole('link',{name:'nosso WhatsApp'})).toBeVisible();
  await context.close();
+});
+
+test('GA4 tag is installed with the configured measurement id',async({page})=>{
+ await page.route('https://www.googletagmanager.com/**',route=>route.abort());
+ await page.goto('/');
+ await expect(page.locator('script[src*="G-HTV2EWQWDX"]')).toHaveCount(1);
+ expect(await page.evaluate(()=>(window as typeof window & {dataLayer?:unknown[]}).dataLayer?.some((entry:any)=>entry?.[0]==='config'&&entry?.[1]==='G-HTV2EWQWDX'))).toBe(true);
 });
