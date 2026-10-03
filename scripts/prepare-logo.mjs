@@ -1,6 +1,7 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import { chromium } from '@playwright/test';
-const svg=await readFile('public/Logo vetorizado.svg','utf8');
+const sourcePath='public/PRATIC LIMP 2026.svg';
+const svg=await readFile(sourcePath,'utf8');
 const browser=await chromium.launch({channel:'chrome',headless:true});
 try {
  const page=await browser.newPage();
@@ -11,27 +12,28 @@ try {
  const optimized=svg.replace(/<\?xml[^>]*\?>\s*/,'').replace(/<!DOCTYPE[^>]*>\s*/,'').replace(/viewBox="[^"]*"/,`viewBox="${viewBox}"`);
  await writeFile('public/brand/pratic-limp.svg',optimized);
  const symbol=await page.locator('svg').evaluate(svg=>{
-  // getBBox() is local to each element: text groups have transforms.
-  // Convert every bound back to the root SVG space before isolating the drop.
-  const rootInverse=svg.getCTM().inverse();
-  const bounds=element=>{
-   const b=element.getBBox(),matrix=rootInverse.multiply(element.getCTM());
-   const points=[[b.x,b.y],[b.x+b.width,b.y],[b.x,b.y+b.height],[b.x+b.width,b.y+b.height]].map(([x,y])=>new DOMPoint(x,y).matrixTransform(matrix));
-   const x=Math.min(...points.map(p=>p.x)),y=Math.min(...points.map(p=>p.y));
-   return {x,y,width:Math.max(...points.map(p=>p.x))-x,height:Math.max(...points.map(p=>p.y))-y};
-  };
-  const pieces=Array.from(svg.children).filter(element=>{
-   if(typeof element.getBBox!=='function')return false;
-   const b=bounds(element);return b.width>0&&b.x>350&&b.y>210&&b.x+b.width<650&&b.y+b.height<580;
+  // The 2026 artwork keeps the three colored pieces of the drop in one group.
+  // Locate that group from its visible geometry so the script does not depend
+  // on Illustrator's generated class names.
+  const groups=Array.from(svg.querySelectorAll('g'));
+  const group=groups.find(candidate=>{
+   const visibleShapes=Array.from(candidate.children).filter(element=>{
+    const style=getComputedStyle(element);
+    return typeof element.getBBox==='function'&&style.display!=='none'&&style.visibility!=='hidden'&&element.getBBox().width>0&&element.getBBox().height>0;
+   });
+   if(visibleShapes.length!==3)return false;
+   const b=candidate.getBBox();
+   return b.x>300&&b.x+b.width<700&&b.y<250&&b.y+b.height<600&&b.height>250;
   });
-  const boxes=pieces.map(bounds);
-  const x=Math.min(...boxes.map(b=>b.x)),y=Math.min(...boxes.map(b=>b.y));
-  const right=Math.max(...boxes.map(b=>b.x+b.width)),bottom=Math.max(...boxes.map(b=>b.y+b.height));
+  if(!group)throw new Error('Não foi possível localizar o grupo vetorial da gota.');
+  const box=group.getBBox();
+  const x=box.x,y=box.y,right=x+box.width,bottom=y+box.height;
   const width=right-x,height=bottom-y,side=Math.max(width,height)+24;
-  return {viewBox:`${x-(side-width)/2} ${y-(side-height)/2} ${side} ${side}`,paths:pieces.map(element=>element.outerHTML).join('\n'),count:pieces.length};
+  const defs=svg.querySelector('defs')?.outerHTML??'';
+  return {viewBox:`${x-(side-width)/2} ${y-(side-height)/2} ${side} ${side}`,defs,paths:group.outerHTML,count:group.children.length};
  });
- const drop=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="${symbol.viewBox}"><title>Gota Pratic Limp</title>${symbol.paths}</svg>`;
+ const drop=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="${symbol.viewBox}"><title>Gota Pratic Limp</title>${symbol.defs}${symbol.paths}</svg>`;
  await writeFile('public/brand/pratic-limp-gota.svg',drop);
  await writeFile('public/favicon.svg',drop);
- console.log({viewBox,output:'public/brand/pratic-limp.svg',symbol:'public/brand/pratic-limp-gota.svg',pieces:symbol.count,embeddedRaster:optimized.includes('<image')});
+ console.log({source:sourcePath,viewBox,output:'public/brand/pratic-limp.svg',symbol:'public/brand/pratic-limp-gota.svg',pieces:symbol.count,embeddedRaster:optimized.includes('<image')});
 } finally {await browser.close()}

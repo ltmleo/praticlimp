@@ -20,7 +20,7 @@ Publicar somente `dist/`. Home e `/privacidade/` são geradas no build; não é 
 - `docs/fontes-e-conteudo.md`: registro de fontes, ativos e informações não confirmadas.
 - `PROPOSTA-CRO.md`: arquitetura, copywriting, UX e plano de mensuração.
 
-`scripts/prepare-logo.mjs` reproduz o enquadramento do logo e a extração da gota a partir de `public/Logo vetorizado.svg`, preservando o original.
+`scripts/prepare-logo.mjs` reproduz o enquadramento do logo e a extração da gota a partir de `public/PRATIC LIMP 2026.svg`, preservando o original.
 
 O formulário prepara uma mensagem no navegador e abre o WhatsApp para confirmação. Sem banco de dados, envio automático ou armazenamento local. O Google Analytics 4 está ativo com a propriedade `G-HTV2EWQWDX`; Meta Pixel e Hotjar não estão instalados. Sem JavaScript, links de telefone/WhatsApp continuam disponíveis e o botão do formulário permanece desabilitado.
 

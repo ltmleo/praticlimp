@@ -15,7 +15,7 @@ Verificação em 03/10/2026. O domínio [Pratic Limp](https://www.praticlimp.com
 
 ## Ativos
 
-- `public/Logo vetorizado.svg`: SVG fornecido pelo usuário, com caminhos vetoriais.
+- `public/PRATIC LIMP 2026.svg`: versão 2026 do SVG fornecido pelo usuário, com caminhos vetoriais; é a fonte atual do logo do site.
 - `public/brand/pratic-limp.svg`: derivado do SVG fornecido, apenas com enquadramento ajustado. Desenho e cores preservados.
 - `public/brand/pratic-limp-gota.svg`: símbolo extraído dos caminhos da gota do mesmo SVG, sem lettering e com área quadrada transparente.
 - `public/favicon.svg`: a mesma gota, para uso no navegador.
