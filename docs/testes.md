@@ -14,9 +14,11 @@ O carregamento do GA4 é bloqueado durante a automação.
 ## Referências visuais
 
 As referências em `tests/visual/win32` foram geradas antes da extração dos componentes.
+Depois da extração, foram atualizadas e revisadas para a reformulação intencional do Liquid Glass.
 O pipeline usa Windows e a versão de Chromium fixada no package-lock, como na criação dessas referências.
 Capturas da seção financeira ocultam somente os elementos fixos que poderiam cobri-la.
 As capturas usam movimento reduzido; a animação das barras é verificada em um teste separado.
+No desktop, a transparência é controlada explicitamente: verificamos o vidro ativo e uma captura adicional com superfícies opacas, respeitando a preferência de acessibilidade.
 
 Não atualize referências para aceitar uma regressão. Revise as diferenças primeiro.
 Para uma alteração visual intencional, gere e revise novas capturas com

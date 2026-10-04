@@ -19,3 +19,274 @@ body{background:#f9fcff}main{background:radial-gradient(ellipse 600px 650px at 9
 .faq-list details p{white-space:pre-line}
 @media(max-width:620px){.brand picture img{width:216px;height:58px;object-fit:contain}.brand>span{display:none}}
 @media(max-width:360px){.brand picture img{width:192px;height:52px}}
+
+/* Liquid Glass: a floating control layer, clear edges and soft optical highlights. */
+:root {
+  --glass-fill: rgba(255, 255, 255, .58);
+  --glass-edge: rgba(255, 255, 255, .88);
+  --glass-optics: inset 0 1px 1px rgba(255,255,255,.98),
+    inset 1px 0 0 rgba(255,255,255,.55),
+    inset 0 -1px 1px rgba(28,70,93,.08);
+  --glass-shadow: var(--glass-optics), 0 18px 46px rgba(21,57,78,.08),
+    0 2px 6px rgba(21,57,78,.035);
+}
+main {
+  background: radial-gradient(ellipse 800px 650px at 100% 2%, #b8e5fc70, transparent),
+    radial-gradient(ellipse 600px 750px at 0% 15%, #d6edaf45, transparent), #fcfdfe;
+}
+header {
+  padding-block: 10px;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+header .nav {
+  position: relative;
+  padding-inline: 26px;
+  border: 1px solid var(--glass-edge);
+  border-radius: 36px;
+  background: linear-gradient(130deg, #ffffffc7, #ffffffa8 55%, #eef8ffb3);
+  backdrop-filter: blur(28px) saturate(175%);
+  -webkit-backdrop-filter: blur(28px) saturate(175%);
+  box-shadow: var(--glass-shadow);
+}
+.reading-progress { left: 36px; right: 36px; width: auto; opacity: .5; }
+.hero { background: transparent; }
+.hero-stage {
+  background: radial-gradient(ellipse at 85% 12%, #9bd9ff90, transparent 60%),
+    radial-gradient(ellipse at 0% 100%, #d2edac85, transparent 60%),
+    linear-gradient(145deg, #ffffff75, #e8f5fd45);
+  border-color: var(--glass-edge);
+  box-shadow: var(--glass-shadow);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+}
+.hero-stage::after {
+  background: linear-gradient(135deg, #ffffff65, transparent 28%, transparent 72%, #ffffff38);
+  box-shadow: inset 2px 2px 2px #ffffffad, inset -1px -1px 1px #ffffff75;
+}
+.heritage-card, .stage-note, .filters, .benefit-icon, .back-top {
+  background: linear-gradient(135deg, #ffffffbd, #ffffff50);
+  border-color: var(--glass-edge);
+  box-shadow: var(--glass-shadow);
+  backdrop-filter: blur(22px) saturate(165%);
+  -webkit-backdrop-filter: blur(22px) saturate(165%);
+}
+.filters { padding: 6px; }
+.filters button.active {
+  background: linear-gradient(150deg, #fffffff0, #ffffff9c);
+  box-shadow: var(--glass-optics), 0 3px 12px #193c5812;
+}
+.button {
+  background-image: linear-gradient(170deg, #ffffff29, #ffffff00 52%, #041b2b12);
+  border-color: #ffffff70;
+  box-shadow: inset 0 1px 1px #ffffff75, inset 0 -1px 1px #032f4d20,
+    0 6px 18px #163c5712;
+}
+.button:hover { box-shadow: inset 0 1px 1px #ffffffa6, 0 8px 24px #163c5724; }
+.faq-section {
+  background: radial-gradient(ellipse at 0% 30%, #cce7f580, transparent 65%), #f3f7f9;
+}
+.faq-list details, form, .cost-own, .cost-service, .cost-chart {
+  background: linear-gradient(135deg, #ffffffc4, #ffffff75);
+  border: 1px solid var(--glass-edge);
+  box-shadow: var(--glass-shadow);
+}
+form {
+  backdrop-filter: blur(24px) saturate(150%);
+  -webkit-backdrop-filter: blur(24px) saturate(150%);
+}
+.faq-list details[open] {
+  background: linear-gradient(135deg, #ffffffed, #ffffffae);
+  box-shadow: var(--glass-shadow);
+}
+input, select, textarea {
+  background: #ffffffba;
+  border-color: #b9cddc80;
+  box-shadow: inset 0 1px 3px #163c5707, 0 1px 0 #ffffffb5;
+}
+.floating-contact {
+  background: linear-gradient(145deg, #ddf8b2c9, #a9d95f99);
+  border-color: #f4ffe9eb;
+  box-shadow: inset 0 1px 2px #ffffffed, inset 1px 0 1px #ffffffa6,
+    inset 0 -1px 1px #47702c24, 0 10px 30px #173b5829;
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+}
+.menu-toggle {
+  background: linear-gradient(135deg, #ffffffb3, #ffffff50);
+  border-color: var(--glass-edge);
+  box-shadow: var(--glass-optics), 0 3px 10px #173b5809;
+}
+@media(max-width:850px) {
+  header .nav { gap: 14px; padding-inline: 20px; }
+}
+@media(max-width:620px) {
+  header { padding-block: 8px; }
+  header .nav { width: calc(100% - 24px); padding-inline: 14px; border-radius: 28px; }
+  .brand picture img { max-width: 100%; }
+  .brand { min-width: 0; }
+  .menu-toggle { flex-shrink: 0; }
+  .nav nav {
+    top: calc(100% + 8px);
+    border: 1px solid var(--glass-edge);
+    border-radius: 24px;
+    background: linear-gradient(135deg, #fffffff0, #ffffffcb);
+    box-shadow: var(--glass-shadow);
+    backdrop-filter: blur(22px) saturate(160%);
+    -webkit-backdrop-filter: blur(22px) saturate(160%);
+  }
+  .hero-stage { backdrop-filter: none; -webkit-backdrop-filter: none; }
+}
+/* Desktop has enough space to reveal the material against a richer backdrop. */
+@media(min-width:1024px) {
+  .hero {
+    background: radial-gradient(ellipse at 82% 34%, #b6e0fca6, transparent 52%),
+      radial-gradient(ellipse at 62% 92%, #dceabda3, transparent 43%),
+      radial-gradient(ellipse at 24% 0%, #e1eaf780, transparent 48%);
+  }
+  header .nav {
+    border-radius: 999px;
+    border-color: #ffffffb3;
+    background: linear-gradient(115deg, #e5f5ffb8, #ffffff99 45%, #eef5e6ad);
+    backdrop-filter: blur(18px) saturate(195%);
+    -webkit-backdrop-filter: blur(18px) saturate(195%);
+    box-shadow: inset 0 2px 2px #ffffffed, inset 2px 0 2px #ffffffb8,
+      inset 0 -2px 2px #5b839226, 0 12px 32px #24445d14, 0 2px 5px #24445d0d;
+  }
+  header .nav::before, .filters::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    padding: 2px;
+    border-radius: inherit;
+    pointer-events: none;
+    background: linear-gradient(120deg, #ffffff, #ffffff20 28%, #91bacd80 49%,
+      #ffffffee 72%, #ffffff30);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+  header .nav nav {
+    padding: 12px 20px;
+    border-radius: 999px;
+    background: #ffffff38;
+    border: 1px solid #ffffff85;
+    box-shadow: inset 0 1px 1px #ffffffdb, inset 0 -1px 1px #173b5810;
+  }
+  .hero-stage {
+    background: linear-gradient(135deg, #ffffff60, #e5f5ff20 45%, #ffffff38);
+    border: 1px solid #ffffffba;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    box-shadow: inset 0 3px 3px #ffffffed, inset 3px 0 3px #ffffff8c,
+      inset -2px -2px 3px #6f9aa02b, 0 32px 64px #295a741f, 0 3px 8px #295a740d;
+  }
+  .hero-stage::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    pointer-events: none;
+    background: linear-gradient(115deg, #ffffff55, transparent 30%,
+      transparent 58%, #ffffff65 59%, #ffffff0d 72%, transparent 73%);
+  }
+  .hero-stage::after {
+    border: 2px solid #ffffff65;
+    background: linear-gradient(155deg, #ffffff4d, transparent 23%, transparent 76%, #ffffff30);
+    box-shadow: inset 0 1px 2px white, inset -1px -2px 2px #ffffffa8;
+  }
+  .heritage-card, .stage-note {
+    background: linear-gradient(130deg, #ffffffb3, #ffffff45 58%, #e9f8ff70);
+    backdrop-filter: blur(12px) saturate(185%);
+    -webkit-backdrop-filter: blur(12px) saturate(185%);
+    box-shadow: inset 0 2px 2px #ffffffeb, inset 2px 0 1px #ffffffa3,
+      inset 0 -1px 2px #7599ab2b, 0 14px 32px #24445d21;
+  }
+  .filters {
+    position: relative;
+    background: linear-gradient(120deg, #e3f2fa75, #ffffff30 60%, #edf3dd73);
+    border-color: #ffffffad;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    box-shadow: inset 0 2px 2px #ffffffed, inset 0 -2px 2px #7695a324,
+      0 8px 24px #24445d12;
+  }
+  .filters button.active {
+    background: linear-gradient(155deg, #ffffffd4, #ffffff75);
+    border-color: #ffffffe8;
+    box-shadow: inset 0 2px 1px white, inset 0 -1px 2px #7799a32b,
+      0 4px 10px #24445d1a;
+  }
+  .faq-section {
+    background: radial-gradient(ellipse at 18% 35%, #cde7f3cc, transparent 57%),
+      radial-gradient(ellipse at 100% 85%, #e2eac9a6, transparent 48%), #f1f6f9;
+  }
+  .faq-list details {
+    background: linear-gradient(130deg, #ffffff99, #ffffff38);
+    backdrop-filter: blur(12px) saturate(155%);
+    -webkit-backdrop-filter: blur(12px) saturate(155%);
+    box-shadow: inset 0 2px 1px #ffffffeb, inset 0 -1px 1px #7195a21f,
+      0 8px 20px #24445d0e;
+  }
+  .contact-section::before {
+    width: 620px;
+    background: radial-gradient(ellipse at 25% 35%, #b5dff5ba, transparent 64%),
+      radial-gradient(ellipse at 85% 75%, #cfe5a8a3, transparent 55%);
+  }
+  form {
+    background: linear-gradient(135deg, #ffffffad, #ffffff45 65%, #edf6eb60);
+    backdrop-filter: blur(18px) saturate(165%);
+    -webkit-backdrop-filter: blur(18px) saturate(165%);
+    box-shadow: inset 0 2px 2px #ffffffed, inset 2px 0 1px #ffffffa6,
+      inset 0 -1px 2px #7493a324, 0 24px 48px #24445d14;
+  }
+  .floating-contact {
+    background: linear-gradient(135deg, #dcf8b7b8, #a9da6b80);
+    backdrop-filter: blur(16px) saturate(195%);
+    -webkit-backdrop-filter: blur(16px) saturate(195%);
+    box-shadow: inset 0 2px 2px #ffffffed, inset 2px 0 1px #ffffffad,
+      inset 0 -2px 2px #456e3a33, 0 12px 30px #173b5833;
+  }
+}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))) {
+  header .nav, .nav nav, .heritage-card, .stage-note, .filters, form,
+  .faq-list details, .cost-own, .cost-service, .cost-chart { background: #f7fafc; }
+  .floating-contact { background: #c3e791; }
+}
+@media(prefers-reduced-transparency:reduce) {
+  header .nav, .nav nav, .hero-stage, .heritage-card, .stage-note, .filters,
+  .benefit-icon, .back-top, form, .floating-contact {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: #f7fafc;
+  }
+  .faq-list details, .faq-list details[open], .cost-own, .cost-service,
+  .cost-chart { background: #f7fafc; }
+  .hero-stage::after { background: none; }
+  .hero-stage::before, header .nav::before, .filters::before { display: none; }
+  .floating-contact { background: #c3e791; }
+}
+/* Keep the desktop's optical finish even when the system requests opaque surfaces. */
+@media(min-width:1024px) and (prefers-reduced-transparency:reduce) {
+  header .nav {
+    background: linear-gradient(115deg, #edf6fc, #f7fafc 45%, #f1f5eb);
+  }
+  .hero-stage {
+    background: linear-gradient(135deg, #f4fafe, #e6f2f9 58%, #edf3e4);
+  }
+  .heritage-card, .stage-note, .filters {
+    background: linear-gradient(135deg, #ffffff, #edf4f7);
+  }
+  header .nav::before, .filters::before { display: block; }
+  .hero-stage::after {
+    background: linear-gradient(155deg, #ffffff66, transparent 23%, transparent 76%, #ffffff30);
+  }
+  .floating-contact {
+    background: linear-gradient(135deg, #dff2c4, #bce18c);
+  }
+}

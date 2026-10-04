@@ -41,7 +41,7 @@ test('mobile layout, navigation, validation and reduced motion',async({page})=>{
  await expect(page.getByRole('button',{name:'Abrir menu'})).toHaveAttribute('aria-expanded','false');
  await page.getByRole('button',{name:'Preparar mensagem'}).click();
  await expect(page.locator('#send-quote')).toHaveCount(0);
- for(const width of [320,390,768,1440]){
+ for(const width of [320,390,768,1024,1280,1440,1920]){
   await page.setViewportSize({width,height:900});
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);
  }
@@ -58,11 +58,30 @@ test('desktop imagery and static privacy page',async({page})=>{
  await page.emulateMedia({reducedMotion:'reduce'});
  await page.goto(base);
  await page.locator('.hero-business-image').evaluate((img:HTMLImageElement)=>img.decode());
+ // Pin this preference: Windows runners may default to reduced transparency.
+ const media = await page.context().newCDPSession(page);
+ await media.send('Emulation.setEmulatedMedia', { features: [
+  {name:'prefers-reduced-motion',value:'reduce'},
+  {name:'prefers-reduced-transparency',value:'no-preference'},
+ ] });
+ await expect(page.locator('.hero-stage')).not.toHaveCSS('backdrop-filter', 'none');
  await expect(page.locator('header .brand img')).toHaveAttribute('src',base+'brand/pratic-limp.svg');
  await page.locator('img').evaluateAll((images:HTMLImageElement[])=>Promise.all(images.map(img=>{img.loading='eager';return img.decode().catch(()=>{})})));
  await page.evaluate(() => document.fonts.ready);
+ await page.screenshot({path:'test-results/desktop-hero-review.png',animations:'disabled'});
  await expect(page).toHaveScreenshot('desktop.png',{fullPage:true,animations:'disabled'});
  await expect(page.locator('.cost-section')).toHaveScreenshot('cost-comparison-desktop.png',{animations:'disabled',stylePath:'tests/screenshot.css'});
+ await media.send('Emulation.setEmulatedMedia', { features: [
+  {name:'prefers-reduced-motion',value:'reduce'},
+  {name:'prefers-reduced-transparency',value:'reduce'},
+ ] });
+ await page.goto(base);
+ await page.locator('img').evaluateAll((images:HTMLImageElement[])=>Promise.all(images.map(img=>{img.loading='eager';return img.decode().catch(()=>{})})));
+ await page.evaluate(() => document.fonts.ready);
+ await expect(page.locator('.hero-stage')).toHaveCSS('backdrop-filter','none');
+ await expect(page.locator('header .nav')).toHaveCSS('backdrop-filter','none');
+ await expect(page.locator('.hero-stage')).not.toHaveCSS('background-image','none');
+ await expect(page).toHaveScreenshot('desktop-opaque.png',{animations:'disabled'});
  await page.goto(base+'privacidade/');
  await expect(page.getByRole('heading',{level:1})).toHaveText('Sua privacidade');
 });
