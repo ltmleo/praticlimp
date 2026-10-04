@@ -1,0 +1,14 @@
+01-direta-print: layout OK
+01-direta-feed: layout OK
+01-direta-story: layout OK
+02-confianca-print: layout OK
+02-confianca-feed: layout OK
+02-confianca-story: layout OK
+03-flexibilidade-print: layout OK
+03-flexibilidade-feed: layout OK
+03-flexibilidade-story: layout OK
+04-empresario-print: layout OK
+04-empresario-feed: layout OK
+04-empresario-story: layout OK
+PDFs: 2 páginas; caixas A5 e sangria verificadas. QR codes decodificados nas renderizações.
+Prova física pendente antes da tiragem.
