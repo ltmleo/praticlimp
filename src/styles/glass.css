@@ -16,5 +16,6 @@ body{background:#f9fcff}main{background:radial-gradient(ellipse 600px 650px at 9
 @media(max-width:620px){.floating-contact{width:52px;height:52px;min-height:52px;padding:0;justify-content:center;gap:0}.floating-contact span{display:none}.floating-contact svg{width:24px;height:24px}}
 
 .brand picture{display:block;flex-shrink:0}
+.faq-list details p{white-space:pre-line}
 @media(max-width:620px){.brand picture img{width:216px;height:58px;object-fit:contain}.brand>span{display:none}}
 @media(max-width:360px){.brand picture img{width:192px;height:52px}}

@@ -1,8 +1,13 @@
 import { test, expect } from '@playwright/test';
 
+const base = process.env.VITE_BASE_PATH || '/';
+test.beforeEach(async ({ page }) => {
+ await page.route('https://www.googletagmanager.com/**', route => route.abort());
+});
+
 test('home, filters, FAQ and qualified WhatsApp message',async({page})=>{
  const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));
- await page.goto('/');
+ await page.goto(base);
  await expect(page.getByRole('heading',{level:1})).toContainText('em boas mãos');
  await expect(page.locator('.service')).toHaveCount(5);
  await page.getByRole('button',{name:/Limpeza especializada/}).click();
@@ -27,7 +32,7 @@ test('home, filters, FAQ and qualified WhatsApp message',async({page})=>{
 test('mobile layout, navigation, validation and reduced motion',async({page})=>{
  await page.setViewportSize({width:390,height:844});
  await page.emulateMedia({reducedMotion:'reduce'});
- await page.goto('/');
+ await page.goto(base);
  await expect(page.locator('.floating-contact span')).toBeHidden();
  await expect(page.locator('.floating-contact')).toHaveCSS('width','52px');
  await page.getByRole('button',{name:'Abrir menu'}).click();
@@ -41,27 +46,30 @@ test('mobile layout, navigation, validation and reduced motion',async({page})=>{
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);
  }
  await page.setViewportSize({width:390,height:844});
- await page.goto('/');
- await page.locator('img').evaluateAll(images=>Promise.all(images.map(img=>{img.loading='eager';return img.decode().catch(()=>{})})));
- await page.screenshot({path:'test-results/mobile.png',fullPage:true,animations:'disabled'});
- await page.locator('.cost-section').screenshot({path:'test-results/cost-comparison-mobile.png',animations:'disabled'});
+ await page.goto(base);
+ await page.locator('img').evaluateAll((images:HTMLImageElement[])=>Promise.all(images.map(img=>{img.loading='eager';return img.decode().catch(()=>{})})));
+ await page.evaluate(() => document.fonts.ready);
+ await expect(page).toHaveScreenshot('mobile.png',{fullPage:true,animations:'disabled'});
+ await expect(page.locator('.cost-section')).toHaveScreenshot('cost-comparison-mobile.png',{animations:'disabled',stylePath:'tests/screenshot.css'});
 });
 
 test('desktop imagery and static privacy page',async({page})=>{
  await page.setViewportSize({width:1440,height:1000});
- await page.goto('/');
+ await page.emulateMedia({reducedMotion:'reduce'});
+ await page.goto(base);
  await page.locator('.hero-business-image').evaluate((img:HTMLImageElement)=>img.decode());
- await expect(page.locator('header .brand img')).toHaveAttribute('src','/brand/pratic-limp.svg');
- await page.locator('img').evaluateAll(images=>Promise.all(images.map(img=>{img.loading='eager';return img.decode().catch(()=>{})})));
- await page.screenshot({path:'test-results/desktop.png',fullPage:true,animations:'disabled'});
- await page.locator('.cost-section').screenshot({path:'test-results/cost-comparison-desktop.png',animations:'disabled'});
- await page.goto('/privacidade/');
+ await expect(page.locator('header .brand img')).toHaveAttribute('src',base+'brand/pratic-limp.svg');
+ await page.locator('img').evaluateAll((images:HTMLImageElement[])=>Promise.all(images.map(img=>{img.loading='eager';return img.decode().catch(()=>{})})));
+ await page.evaluate(() => document.fonts.ready);
+ await expect(page).toHaveScreenshot('desktop.png',{fullPage:true,animations:'disabled'});
+ await expect(page.locator('.cost-section')).toHaveScreenshot('cost-comparison-desktop.png',{animations:'disabled',stylePath:'tests/screenshot.css'});
+ await page.goto(base+'privacidade/');
  await expect(page.getByRole('heading',{level:1})).toHaveText('Sua privacidade');
 });
 
 test('HTML contains main content without JavaScript',async({browser})=>{
  const context=await browser.newContext({javaScriptEnabled:false});const page=await context.newPage();
- await page.goto('http://localhost:4173/');
+ await page.goto('http://localhost:4173'+base);
  await expect(page.getByRole('heading',{level:1})).toBeVisible();
  await expect(page.locator('.service').first()).toBeVisible();
  await expect(page.locator('.service').first()).toHaveCSS('opacity','1');
@@ -72,7 +80,54 @@ test('HTML contains main content without JavaScript',async({browser})=>{
 
 test('GA4 tag is installed with the configured measurement id',async({page})=>{
  await page.route('https://www.googletagmanager.com/**',route=>route.abort());
- await page.goto('/');
+ await page.goto(base);
  await expect(page.locator('script[src*="G-HTV2EWQWDX"]')).toHaveCount(1);
  expect(await page.evaluate(()=>(window as typeof window & {dataLayer?:unknown[]}).dataLayer?.some((entry:any)=>entry?.[0]==='config'&&entry?.[1]==='G-HTV2EWQWDX'))).toBe(true);
+});
+
+test('native validation, mobile brand, telephone links and Escape',async({page})=>{
+ await page.setViewportSize({width:390,height:844});
+ await page.goto(base);
+ await expect.poll(() => page.locator('header .brand img').evaluate((img:HTMLImageElement)=>img.currentSrc)).toContain(base+'brand/pratic-limp-horizontal.svg');
+ for (const link of await page.locator('a[href^="tel:"]').all()) await expect(link).toHaveAttribute('href','tel:+5519974163336');
+ const toggle=page.getByRole('button',{name:'Abrir menu'});
+ await toggle.click();
+ await page.locator('#menu a').first().focus();
+ await page.keyboard.press('Escape');
+ await expect(toggle).toBeFocused();
+ await expect(toggle).toHaveAttribute('aria-expanded','false');
+ await page.locator('#name').fill('   ');
+ await page.locator('#city').fill('   ');
+ await page.locator('#phone').fill('123');
+ await page.locator('#service').selectOption('Terceirização de limpeza');
+ await page.getByRole('button',{name:/Preparar mensagem/}).click();
+ await expect(page.locator('#send-quote')).toHaveCount(0);
+ for (const id of ['name','city','phone']) expect(await page.locator('#'+id).evaluate((input:HTMLInputElement)=>input.checkValidity())).toBe(false);
+ for(const phone of ['1999991234','5519999991234','55199999912345']) {
+  await page.locator('#phone').fill(phone);
+  expect(await page.locator('#phone').evaluate((input:HTMLInputElement)=>input.checkValidity())).toBe(phone.length<=13);
+ }
+ await expect(page.locator('summary').first()).toContainText('Por que escolher a Pratic Limp');
+});
+
+test('bars animate when visible and respect reduced motion',async({page})=>{
+ await page.emulateMedia({reducedMotion:'no-preference'});
+ await page.goto(base);
+ await page.evaluate(()=>{
+  const samples:number[]=[];
+  (window as any).barSamples=samples;
+  const record=()=>{
+   const bar=document.querySelector('.cost-pratic-bar')!;
+   samples.push(new DOMMatrixReadOnly(getComputedStyle(bar).transform).a);
+   if(samples.length<240)requestAnimationFrame(record);
+  };
+  requestAnimationFrame(record);
+ });
+ await page.locator('.cost-chart').scrollIntoViewIfNeeded();
+ await expect.poll(()=>page.evaluate(()=>(window as any).barSamples.some((v:number)=>v>0&&v<0.99))).toBe(true);
+ await expect.poll(()=>page.locator('.cost-pratic-bar').evaluate(el=>new DOMMatrixReadOnly(getComputedStyle(el).transform).a)).toBe(1);
+ await page.emulateMedia({reducedMotion:'reduce'});
+ await page.goto(base);
+ await page.locator('.cost-chart').scrollIntoViewIfNeeded();
+ expect(await page.locator('.cost-pratic-bar').evaluate(el=>new DOMMatrixReadOnly(getComputedStyle(el).transform).a)).toBe(1);
 });

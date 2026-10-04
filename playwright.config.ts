@@ -1,6 +1,7 @@
 import { defineConfig } from '@playwright/test';
 export default defineConfig({
- testDir:'./tests', fullyParallel:false,
- use:{baseURL:'http://localhost:4173',channel:'chrome'},
- webServer:{command:'npm run preview -- --port 4173',url:'http://localhost:4173',reuseExistingServer:true},
+ testDir:'./tests', testMatch:'site.spec.ts', fullyParallel:false,
+ snapshotPathTemplate:'{testDir}/visual/{platform}/{arg}{ext}',
+ use:{baseURL:`http://localhost:4173${process.env.VITE_BASE_PATH || '/'}`,browserName:'chromium'},
+ webServer:{command:'npm run build && npm run preview -- --port 4173 --strictPort',url:`http://localhost:4173${process.env.VITE_BASE_PATH || '/'}`,reuseExistingServer:false,timeout:120000},
 });

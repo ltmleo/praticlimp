@@ -1,0 +1,2 @@
+/* Isolated section captures exclude fixed overlays, without changing the site. */
+header, .skip, .floating-contact { visibility: hidden !important; }
