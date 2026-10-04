@@ -43,7 +43,11 @@ test('mobile layout, navigation, validation and reduced motion',async({page})=>{
  await expect(page.locator('#send-quote')).toHaveCount(0);
  for(const width of [320,390,768,1024,1280,1440,1920]){
   await page.setViewportSize({width,height:900});
-  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);
+  const fits = await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth);
+  const overflow = fits ? [] : await page.evaluate(() => Array.from(document.querySelectorAll('body *'))
+   .filter(el => el.getBoundingClientRect().right > innerWidth + 1)
+   .slice(0, 12).map(el => ({tag:el.tagName, class:el.className, parent:el.parentElement?.className, text:el.textContent?.slice(0,70), right:el.getBoundingClientRect().right})));
+  expect(fits, `Horizontal overflow at ${width}px: ${JSON.stringify(overflow)}`).toBe(true);
  }
  await page.setViewportSize({width:390,height:844});
  await page.goto(base);

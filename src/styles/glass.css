@@ -235,6 +235,7 @@ input, select, textarea {
   }
   .contact-section::before {
     width: 620px;
+    right: 0;
     background: radial-gradient(ellipse at 25% 35%, #b5dff5ba, transparent 64%),
       radial-gradient(ellipse at 85% 75%, #cfe5a8a3, transparent 55%);
   }
@@ -252,6 +253,12 @@ input, select, textarea {
     box-shadow: inset 0 2px 2px #ffffffed, inset 2px 0 1px #ffffffad,
       inset 0 -2px 2px #456e3a33, 0 12px 30px #173b5833;
   }
+}
+@media(min-width:1024px) and (max-width:1199px) {
+  header .nav { gap: 12px; padding-inline: 18px; }
+  header .nav nav { gap: 14px; padding: 12px 14px; font-size: 13px; }
+  header .nav .header-cta { font-size: 12px; padding-inline: 16px; gap: 12px; }
+  header .brand img { width: 135px; height: 74px; }
 }
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))) {
   header .nav, .nav nav, .heritage-card, .stage-note, .filters, form,
