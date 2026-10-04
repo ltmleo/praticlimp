@@ -24,7 +24,6 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
-      - run: npx playwright install chromium
       - run: npx tsc --noEmit -p tsconfig.test.json
       - run: npm run test:unit
       - run: npm run test:e2e

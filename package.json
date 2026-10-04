@@ -7,8 +7,10 @@
     "dev": "vite --host 0.0.0.0",
     "build": "tsc --noEmit && vite build && node scripts/prerender.mjs",
     "preview": "vite preview --host 0.0.0.0",
+    "pretest": "playwright install chromium",
     "test": "playwright test",
     "test:unit": "vitest run",
+    "pretest:e2e": "playwright install chromium",
     "test:e2e": "node scripts/test-e2e.mjs"
   },
   "dependencies": {

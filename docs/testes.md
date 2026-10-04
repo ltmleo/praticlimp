@@ -7,7 +7,15 @@ Antes de reorganizar componentes, os testes registram o comportamento da home ex
 - `npm run test:e2e`: Playwright com builds novos em `/` e `/praticlimp/`.
 - `npx tsc --noEmit -p tsconfig.test.json`: tipos do código e dos testes.
 
-Instale o navegador com `npx playwright install chromium` na primeira execução.
+Depois de `npm ci`, execute `npm test` ou `npm run test:e2e`.
+Esses comandos preparam automaticamente a versão de Chromium exigida pelo Playwright instalado,
+antes de iniciar o build e os testes. Se o navegador já estiver instalado, ele é reutilizado;
+o primeiro download exige acesso à internet. O CI usa a mesma preparação.
+
+Se executar o Playwright diretamente (`npx playwright test` ou uma extensão do editor),
+prepare o navegador antes com `npx playwright install chromium`.
+O erro `browserType.launch: Executable doesn't exist` indica que o navegador não foi
+encontrado naquele ambiente; os testes ainda não chegaram a abrir o site.
 Os testes não enviam mensagens; verificam o link preparado para o WhatsApp.
 O carregamento do GA4 é bloqueado durante a automação.
 
