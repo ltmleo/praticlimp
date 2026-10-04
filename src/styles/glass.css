@@ -150,17 +150,17 @@ input, select, textarea {
   header .nav {
     border-radius: 999px;
     border-color: #ffffffb3;
-    background: linear-gradient(115deg, #e5f5ffb8, #ffffff99 45%, #eef5e6ad);
-    backdrop-filter: blur(18px) saturate(195%);
-    -webkit-backdrop-filter: blur(18px) saturate(195%);
-    box-shadow: inset 0 2px 2px #ffffffed, inset 2px 0 2px #ffffffb8,
+    background: linear-gradient(115deg, #e5f5ff24, #ffffff0a 45%, #eef5e61a);
+    backdrop-filter: blur(5px) saturate(120%);
+    -webkit-backdrop-filter: blur(5px) saturate(120%);
+    box-shadow: inset 0 1px 1px #ffffffed, inset 1px 0 1px #ffffffb8,
       inset 0 -2px 2px #5b839226, 0 12px 32px #24445d14, 0 2px 5px #24445d0d;
   }
   header .nav::before, .filters::before {
     content: '';
     position: absolute;
     inset: -1px;
-    padding: 2px;
+    padding: 1px;
     border-radius: inherit;
     pointer-events: none;
     background: linear-gradient(120deg, #ffffff, #ffffff20 28%, #91bacd80 49%,
@@ -173,16 +173,16 @@ input, select, textarea {
   header .nav nav {
     padding: 12px 20px;
     border-radius: 999px;
-    background: #ffffff38;
+    background: #ffffff0d;
     border: 1px solid #ffffff85;
     box-shadow: inset 0 1px 1px #ffffffdb, inset 0 -1px 1px #173b5810;
   }
   .hero-stage {
-    background: linear-gradient(135deg, #ffffff60, #e5f5ff20 45%, #ffffff38);
+    background: linear-gradient(135deg, #ffffff1f, #e5f5ff08 45%, #ffffff12);
     border: 1px solid #ffffffba;
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
-    box-shadow: inset 0 3px 3px #ffffffed, inset 3px 0 3px #ffffff8c,
+    backdrop-filter: blur(3px) saturate(115%);
+    -webkit-backdrop-filter: blur(3px) saturate(115%);
+    box-shadow: inset 0 1px 1px #ffffffed, inset 1px 0 1px #ffffff8c,
       inset -2px -2px 3px #6f9aa02b, 0 32px 64px #295a741f, 0 3px 8px #295a740d;
   }
   .hero-stage::before {
@@ -192,32 +192,32 @@ input, select, textarea {
     z-index: -1;
     border-radius: inherit;
     pointer-events: none;
-    background: linear-gradient(115deg, #ffffff55, transparent 30%,
-      transparent 58%, #ffffff65 59%, #ffffff0d 72%, transparent 73%);
+    background: linear-gradient(115deg, #ffffff14, transparent 30%,
+      transparent 58%, #ffffff1a 59%, #ffffff05 72%, transparent 73%);
   }
   .hero-stage::after {
-    border: 2px solid #ffffff65;
-    background: linear-gradient(155deg, #ffffff4d, transparent 23%, transparent 76%, #ffffff30);
+    border: 1px solid #ffffff65;
+    background: linear-gradient(155deg, #ffffff14, transparent 23%, transparent 76%, #ffffff0a);
     box-shadow: inset 0 1px 2px white, inset -1px -2px 2px #ffffffa8;
   }
   .heritage-card, .stage-note {
-    background: linear-gradient(130deg, #ffffffb3, #ffffff45 58%, #e9f8ff70);
-    backdrop-filter: blur(12px) saturate(185%);
-    -webkit-backdrop-filter: blur(12px) saturate(185%);
-    box-shadow: inset 0 2px 2px #ffffffeb, inset 2px 0 1px #ffffffa3,
+    background: linear-gradient(130deg, #ffffff45, #ffffff24 58%, #e9f8ff30);
+    backdrop-filter: blur(5px) saturate(120%);
+    -webkit-backdrop-filter: blur(5px) saturate(120%);
+    box-shadow: inset 0 1px 1px #ffffffeb, inset 1px 0 1px #ffffffa3,
       inset 0 -1px 2px #7599ab2b, 0 14px 32px #24445d21;
   }
   .filters {
     position: relative;
-    background: linear-gradient(120deg, #e3f2fa75, #ffffff30 60%, #edf3dd73);
+    background: linear-gradient(120deg, #e3f2fa24, #ffffff0a 60%, #edf3dd1a);
     border-color: #ffffffad;
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
-    box-shadow: inset 0 2px 2px #ffffffed, inset 0 -2px 2px #7695a324,
+    backdrop-filter: blur(3px) saturate(115%);
+    -webkit-backdrop-filter: blur(3px) saturate(115%);
+    box-shadow: inset 0 1px 1px #ffffffed, inset 0 -2px 2px #7695a324,
       0 8px 24px #24445d12;
   }
   .filters button.active {
-    background: linear-gradient(155deg, #ffffffd4, #ffffff75);
+    background: linear-gradient(155deg, #ffffff66, #ffffff26);
     border-color: #ffffffe8;
     box-shadow: inset 0 2px 1px white, inset 0 -1px 2px #7799a32b,
       0 4px 10px #24445d1a;
@@ -227,9 +227,9 @@ input, select, textarea {
       radial-gradient(ellipse at 100% 85%, #e2eac9a6, transparent 48%), #f1f6f9;
   }
   .faq-list details {
-    background: linear-gradient(130deg, #ffffff99, #ffffff38);
-    backdrop-filter: blur(12px) saturate(155%);
-    -webkit-backdrop-filter: blur(12px) saturate(155%);
+    background: linear-gradient(130deg, #ffffff24, #ffffff0d);
+    backdrop-filter: blur(4px) saturate(115%);
+    -webkit-backdrop-filter: blur(4px) saturate(115%);
     box-shadow: inset 0 2px 1px #ffffffeb, inset 0 -1px 1px #7195a21f,
       0 8px 20px #24445d0e;
   }
@@ -240,19 +240,25 @@ input, select, textarea {
       radial-gradient(ellipse at 85% 75%, #cfe5a8a3, transparent 55%);
   }
   form {
-    background: linear-gradient(135deg, #ffffffad, #ffffff45 65%, #edf6eb60);
-    backdrop-filter: blur(18px) saturate(165%);
-    -webkit-backdrop-filter: blur(18px) saturate(165%);
-    box-shadow: inset 0 2px 2px #ffffffed, inset 2px 0 1px #ffffffa6,
+    background: linear-gradient(135deg, #ffffff24, #ffffff0d 65%, #edf6eb1a);
+    backdrop-filter: blur(5px) saturate(115%);
+    -webkit-backdrop-filter: blur(5px) saturate(115%);
+    box-shadow: inset 0 1px 1px #ffffffed, inset 1px 0 1px #ffffffa6,
       inset 0 -1px 2px #7493a324, 0 24px 48px #24445d14;
   }
   .floating-contact {
-    background: linear-gradient(135deg, #dcf8b7b8, #a9da6b80);
-    backdrop-filter: blur(16px) saturate(195%);
-    -webkit-backdrop-filter: blur(16px) saturate(195%);
-    box-shadow: inset 0 2px 2px #ffffffed, inset 2px 0 1px #ffffffad,
+    background: linear-gradient(135deg, #dcf8b733, #a9da6b1a);
+    backdrop-filter: blur(5px) saturate(125%);
+    -webkit-backdrop-filter: blur(5px) saturate(125%);
+    box-shadow: inset 0 1px 1px #ffffffed, inset 1px 0 1px #ffffffad,
       inset 0 -2px 2px #456e3a33, 0 12px 30px #173b5833;
   }
+}
+@media(min-width:1024px) and (prefers-reduced-transparency:no-preference) {
+  header .nav[data-tone="dark"] { color: #fff; background: #173b581a; }
+  header .nav[data-tone="dark"] nav,
+  header .nav[data-tone="dark"] .brand > span { color: #fff; }
+  .floating-contact[data-tone="dark"] { color: #fff; background: #173b5826; }
 }
 @media(min-width:1024px) and (max-width:1199px) {
   header .nav { gap: 12px; padding-inline: 18px; }

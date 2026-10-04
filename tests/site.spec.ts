@@ -75,6 +75,14 @@ test('desktop imagery and static privacy page',async({page})=>{
  await page.screenshot({path:'test-results/desktop-hero-review.png',animations:'disabled'});
  await expect(page).toHaveScreenshot('desktop.png',{fullPage:true,animations:'disabled'});
  await expect(page.locator('.cost-section')).toHaveScreenshot('cost-comparison-desktop.png',{animations:'disabled',stylePath:'tests/screenshot.css'});
+ await page.locator('.about').evaluate(el => window.scrollTo({top: el.getBoundingClientRect().top + scrollY + 100, behavior:'instant'}));
+ await expect(page.locator('header .nav')).toHaveAttribute('data-tone','dark');
+ await expect(page.locator('header .nav nav')).toHaveCSS('color','rgb(255, 255, 255)');
+ await page.locator('.about').evaluate(el => window.scrollTo({top: el.getBoundingClientRect().top + scrollY - innerHeight + 120, behavior:'instant'}));
+ await expect(page.locator('.floating-contact')).toHaveAttribute('data-tone','dark');
+ await page.evaluate(() => window.scrollTo({top:0,behavior:'instant'}));
+ await expect(page.locator('header .nav')).toHaveAttribute('data-tone','light');
+ await expect(page.locator('.floating-contact')).toHaveAttribute('data-tone','light');
  await media.send('Emulation.setEmulatedMedia', { features: [
   {name:'prefers-reduced-motion',value:'reduce'},
   {name:'prefers-reduced-transparency',value:'reduce'},
