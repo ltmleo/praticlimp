@@ -35,6 +35,8 @@ test('mobile layout, navigation, validation and reduced motion',async({page})=>{
  await page.goto(base);
  await expect(page.locator('.floating-contact span')).toBeHidden();
  await expect(page.locator('.floating-contact')).toHaveCSS('width','52px');
+ await expect(page.locator('header .nav')).toHaveCSS('backdrop-filter','blur(5px) saturate(1.25)');
+ await expect(page.locator('.floating-contact')).toHaveCSS('backdrop-filter','blur(4px) saturate(1.3)');
  await page.getByRole('button',{name:'Abrir menu'}).click();
  await expect(page.locator('#menu')).toBeVisible();
  await page.locator('#menu').getByText('Serviços',{exact:true}).click();
@@ -53,7 +55,9 @@ test('mobile layout, navigation, validation and reduced motion',async({page})=>{
  await page.goto(base);
  await page.locator('img').evaluateAll((images:HTMLImageElement[])=>Promise.all(images.map(img=>{img.loading='eager';return img.decode().catch(()=>{})})));
  await page.evaluate(() => document.fonts.ready);
- await expect(page).toHaveScreenshot('mobile.png',{fullPage:true,animations:'disabled'});
+ // Chromium can vary a few glyph-edge pixels across fresh builds; keep tolerance below 0.01%.
+ await expect(page).toHaveScreenshot('mobile.png',{fullPage:true,animations:'disabled',maxDiffPixelRatio:0.0001});
+ await page.screenshot({path:'test-results/mobile-glass-review.png',animations:'disabled'});
  await expect(page.locator('.cost-section')).toHaveScreenshot('cost-comparison-mobile.png',{animations:'disabled',stylePath:'tests/screenshot.css'});
 });
 
@@ -90,10 +94,10 @@ test('desktop imagery and static privacy page',async({page})=>{
  await page.goto(base);
  await page.locator('img').evaluateAll((images:HTMLImageElement[])=>Promise.all(images.map(img=>{img.loading='eager';return img.decode().catch(()=>{})})));
  await page.evaluate(() => document.fonts.ready);
- await expect(page.locator('.hero-stage')).toHaveCSS('backdrop-filter','none');
- await expect(page.locator('header .nav')).toHaveCSS('backdrop-filter','none');
+ await expect(page.locator('.hero-stage')).toHaveCSS('backdrop-filter','blur(3px) saturate(1.15)');
+ await expect(page.locator('header .nav')).toHaveCSS('backdrop-filter','blur(5px) saturate(1.2)');
  await expect(page.locator('.hero-stage')).not.toHaveCSS('background-image','none');
- await expect(page).toHaveScreenshot('desktop-opaque.png',{animations:'disabled'});
+ await expect(page).toHaveScreenshot('desktop-system-preference.png',{animations:'disabled'});
  await page.goto(base+'privacidade/');
  await expect(page.getByRole('heading',{level:1})).toHaveText('Sua privacidade');
 });

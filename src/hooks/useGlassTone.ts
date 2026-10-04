@@ -6,7 +6,7 @@ export default function useGlassTone<T extends HTMLElement>(sticky = false) {
   const [tone, setTone] = useState<'light' | 'dark'>('light');
 
   useEffect(() => {
-    const enabled = window.matchMedia('(min-width: 1024px) and (prefers-reduced-transparency: no-preference)');
+    const enabled = window.matchMedia('(min-width: 0px)');
     let observer: IntersectionObserver | undefined;
 
     const observe = () => {

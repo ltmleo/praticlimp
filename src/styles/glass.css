@@ -4,7 +4,7 @@ body{background:#f9fcff}main{background:radial-gradient(ellipse 600px 650px at 9
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){header{background:#fff}.heritage-card,.faq-list details,form{background:#f1f7fa}.floating-contact{background:#b8dc77}}
 @media(max-width:850px){.brand img{width:131px;height:70px}.contact-section::before{right:0;width:70%}.principles{padding:20px}.filters button{gap:17px}}
 @media(max-width:620px){.brand img{width:123px;height:66px}.hero-stage{border-radius:28px 28px 75px 28px}.stage-note{top:67px;left:20px;font-size:6px;padding:7px 10px}.hero-business-image{top:85px}.heritage-card{bottom:22px;border-radius:20px;padding:17px}.filters{border-radius:23px;max-width:100%;gap:3px}.filters button{font-size:9px;padding:10px 11px;gap:10px;min-height:42px}.filters button>span{font-size:6px}.service-featured{border-radius:24px}.principles{padding:19px 16px;gap:18px}.faq-list details{padding-inline:13px}.faq-list summary{gap:10px;font-size:11px}.faq-list details p{padding-inline:22px 3px}.contact-section::before{right:0;width:100%;height:550px;top:auto;bottom:0}form{border-radius:25px}.nav nav{background:#ffffffed;backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px)}.menu-toggle{background:#ffffff80;box-shadow:inset 0 1px 0 #fff}.brand-drop{width:30px;height:30px}}
-@media(prefers-reduced-transparency:reduce){header,.heritage-card,form,.faq-list details{backdrop-filter:none;background:#f3f8fb}.floating-contact{backdrop-filter:none;background:#b9dc79}}
+@media(max-width:1023px) and (prefers-reduced-transparency:reduce){header,.heritage-card,form,.faq-list details{backdrop-filter:none;background:#f3f8fb}.floating-contact{backdrop-filter:none;background:#b9dc79}}
 
 /* Readability: normal copy 16px; supporting labels 12–14px. */
 .topbar{font-size:12px}.topbar .container{height:38px}.brand img{width:155px;height:84px}.brand>span{font-size:9px;letter-spacing:.7px}.nav nav{font-size:14px}.nav .header-cta{font-size:13px}.button{font-size:14px;min-height:54px}.eyebrow{font-size:12px;letter-spacing:1.3px}.hero-description{font-size:16px;max-width:445px;line-height:1.8}.hero-secondary{font-size:13px}.hero-footnote p{font-size:12px}.hero-copy{padding-block:10px}.stage-top>span{font-size:11px;letter-spacing:1.4px}.stage-note{font-size:10px;letter-spacing:1px;top:95px}.hero-business-image{top:139px}.heritage-card{width:234px;padding:24px}.heritage-card>span{font-size:11px;letter-spacing:1px}.heritage-card p{font-size:12px;line-height:1.6}.stage-caption{font-size:10px;letter-spacing:1px}.expertise-strip span{font-size:14px}.clients-caption{min-width:230px}.clients-caption .eyebrow{font-size:11px;letter-spacing:1px}.clients-caption>p:last-child{font-size:12px}.client-logos{gap:22px}.section-heading>p{font-size:15px;max-width:320px}.filters button{font-size:13px;min-height:46px}.filters button>span{font-size:11px}.service-number{font-size:12px}.service-content .eyebrow{font-size:10px;letter-spacing:1px}.service-content>p:not(.eyebrow){font-size:15px;line-height:1.75}.service h3{font-size:23px}.service-featured{min-height:750px}.service-featured .service-content .eyebrow{font-size:11px}.service-featured h3{font-size:38px}.service-featured .service-content>p:not(.eyebrow){font-size:16px}.service-featured ul{font-size:14px;gap:16px}.service-featured .service-link{font-size:14px}.solutions-bottom{font-size:14px}.since>span{font-size:11px;letter-spacing:1px}.about-copy>p:not(.large-copy){font-size:16px}.principles>div>span{font-size:12px}.principles h3{font-size:16px}.principles p{font-size:14px;line-height:1.8}.about .text-link,.text-link{font-size:14px}.about-bottom{font-size:11px;letter-spacing:1px}.commitment-item h3{font-size:19px}.commitment-item p{font-size:15px;max-width:100%;line-height:1.8}.benefit-number{font-size:12px}.faq-grid>div>p:not(.eyebrow){font-size:16px}.faq-list summary{font-size:15px;line-height:1.6}.faq-number{font-size:12px}.faq-list details p{font-size:15px}.contact-copy>p:not(.eyebrow){font-size:16px}.contact-line{font-size:20px}.contact-line small{font-size:11px;letter-spacing:1px}.coverage p{font-size:14px}form>p{font-size:14px}label{font-size:14px}input,select,textarea{font-size:16px}.privacy-note{font-size:12px;line-height:1.75}form .button{font-size:14px}#quote-result small{font-size:12px}.footer-main p{font-size:14px}.footer-main h3{font-size:14px}.footer-main>div>a:not(.brand){font-size:14px}.footer-bottom{font-size:12px}.footer-bottom>span:nth-child(2){font-size:10px;letter-spacing:1px}.floating-contact{font-size:13px}
@@ -254,7 +254,7 @@ input, select, textarea {
       inset 0 -2px 2px #456e3a33, 0 12px 30px #173b5833;
   }
 }
-@media(min-width:1024px) and (prefers-reduced-transparency:no-preference) {
+@media(min-width:1024px) {
   header .nav[data-tone="dark"] { color: #fff; background: #173b581a; }
   header .nav[data-tone="dark"] nav,
   header .nav[data-tone="dark"] .brand > span { color: #fff; }
@@ -271,7 +271,7 @@ input, select, textarea {
   .faq-list details, .cost-own, .cost-service, .cost-chart { background: #f7fafc; }
   .floating-contact { background: #c3e791; }
 }
-@media(prefers-reduced-transparency:reduce) {
+@media(max-width:1023px) and (prefers-reduced-transparency:reduce) {
   header .nav, .nav nav, .hero-stage, .heritage-card, .stage-note, .filters,
   .benefit-icon, .back-top, form, .floating-contact {
     backdrop-filter: none;
@@ -284,22 +284,40 @@ input, select, textarea {
   .hero-stage::before, header .nav::before, .filters::before { display: none; }
   .floating-contact { background: #c3e791; }
 }
-/* Keep the desktop's optical finish even when the system requests opaque surfaces. */
-@media(min-width:1024px) and (prefers-reduced-transparency:reduce) {
-  header .nav {
-    background: linear-gradient(115deg, #edf6fc, #f7fafc 45%, #f1f5eb);
+
+/* Mobile glass: visible backdrop, thin specular edges and restrained blur. */
+@media(max-width:1023px) {
+  header .nav, .heritage-card, .stage-note, .filters, form,
+  .faq-list details, .faq-list details[open], .benefit-icon {
+    background: linear-gradient(135deg, #ffffff38, #ffffff12 65%, #e8f6ff1a);
+    border: 1px solid #ffffffb3;
+    backdrop-filter: blur(5px) saturate(125%);
+    -webkit-backdrop-filter: blur(5px) saturate(125%);
+    box-shadow: inset 0 1px 0 #fffffff0, inset 1px 0 0 #ffffff66,
+      inset 0 -1px 0 #41677a26, 0 8px 24px #173b5814;
   }
   .hero-stage {
-    background: linear-gradient(135deg, #f4fafe, #e6f2f9 58%, #edf3e4);
+    background: linear-gradient(135deg, #b9e5ff26, #ffffff0d 55%, #d8edb31f);
+    backdrop-filter: blur(3px) saturate(115%);
+    -webkit-backdrop-filter: blur(3px) saturate(115%);
   }
-  .heritage-card, .stage-note, .filters {
-    background: linear-gradient(135deg, #ffffff, #edf4f7);
-  }
-  header .nav::before, .filters::before { display: block; }
   .hero-stage::after {
-    background: linear-gradient(155deg, #ffffff66, transparent 23%, transparent 76%, #ffffff30);
+    background: linear-gradient(135deg, #ffffff1f, transparent 25%, transparent 80%, #ffffff14);
+    box-shadow: inset 1px 1px 1px #ffffffd9, inset -1px -1px 1px #ffffff80;
   }
+  .heritage-card { background: linear-gradient(135deg, #ffffff50, #ffffff24); }
+  .heritage-card p { color: #29495e; }
+  .menu-toggle { background: #ffffff1f; }
+  .nav nav { background: #f5fafce6; color: #173b58; }
   .floating-contact {
-    background: linear-gradient(135deg, #dff2c4, #bce18c);
+    background: linear-gradient(135deg, #e0ffc340, #c3e7911a);
+    backdrop-filter: blur(4px) saturate(130%);
+    -webkit-backdrop-filter: blur(4px) saturate(130%);
+    box-shadow: inset 0 1px 1px #fff, inset 1px 0 0 #ffffff99,
+      inset 0 -1px 1px #41677a33, 0 6px 20px #173b5826;
   }
+  header .nav[data-tone="dark"] { background: #173b5826; color: #fff; }
+  header .nav[data-tone="dark"] .brand > span { color: #fff; }
+  header .nav[data-tone="dark"] .menu-toggle span { background: #fff; }
+  .floating-contact[data-tone="dark"] { background: #173b5826; color: #fff; }
 }
