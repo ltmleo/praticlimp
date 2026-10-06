@@ -2,6 +2,17 @@
 
 Site estático em React, Vite, TypeScript e Motion, com HTML pré-renderizado.
 
+Identidade visual: consulte o [design system da Pratic Limp](docs/design-system.md)
+antes de criar ou alterar o site, cartões, panfletos ou outras peças da marca.
+O guia documenta a aparência atual do site e sua adaptação para impressão e redes sociais.
+
+Novos cartões e panfletos: [galeria](docs/materiais/index.html) e
+[instruções de edição e impressão](docs/materiais/LEIA-ME.md).
+
+Acervo completo não listado: [documentação e referências](docs/galeria/LEIA-ME.md).
+O build inclui a rota isolada `/acervo-7f3c9a2e/`, sem links ou recursos adicionais
+na página principal. Acesso por link, sem autenticação.
+
 ```sh
 npm install
 npm run dev

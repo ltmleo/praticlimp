@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
-    "build": "tsc --noEmit && vite build && node scripts/prerender.mjs",
+    "build": "tsc --noEmit && vite build && node scripts/prerender.mjs && node scripts/build-gallery.mjs",
+    "build:gallery": "node scripts/build-gallery.mjs",
     "preview": "vite preview --host 0.0.0.0",
     "pretest": "playwright install chromium",
     "test": "playwright test",

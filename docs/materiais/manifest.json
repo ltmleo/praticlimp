@@ -1,0 +1,38 @@
+[
+  {
+    "id": "panfleto-institucional",
+    "name": "Panfleto · Institucional",
+    "kind": "flyer",
+    "trim": [
+      148,
+      210
+    ]
+  },
+  {
+    "id": "panfleto-terceirizacao",
+    "name": "Panfleto · Terceirização",
+    "kind": "flyer",
+    "trim": [
+      148,
+      210
+    ]
+  },
+  {
+    "id": "cartao-essencial",
+    "name": "Cartão · Essencial",
+    "kind": "card",
+    "trim": [
+      90,
+      50
+    ]
+  },
+  {
+    "id": "cartao-vidro",
+    "name": "Cartão · Vidro suave",
+    "kind": "card",
+    "trim": [
+      90,
+      50
+    ]
+  }
+]

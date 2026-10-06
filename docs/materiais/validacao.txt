@@ -1,0 +1,6 @@
+panfleto-institucional: fontes e imagens carregadas; layout dentro da área segura.
+panfleto-terceirizacao: fontes e imagens carregadas; layout dentro da área segura.
+cartao-essencial: fontes e imagens carregadas; layout dentro da área segura.
+cartao-vidro: fontes e imagens carregadas; layout dentro da área segura.
+PDFs rasterizados com Poppler; dimensões, texto, fontes e QR verificados.
+Prova física e conversão conforme perfil da gráfica pendentes.
