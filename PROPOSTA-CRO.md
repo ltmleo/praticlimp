@@ -11,13 +11,13 @@ Toda afirmação institucional e cada ativo têm sua origem registrada em [Fonte
 ## 2. Arquitetura da home — wireframe em texto
 
 1. **Cabeçalho:** logo SVG original, links Soluções, Nossa história, Clientes, Dúvidas e CTA Solicitar orçamento. Barra superior com telefone; menu compacto no celular. Superfície translúcida com contraste preservado.
-2. **Hero:** “Limpeza para sua empresa. Cuidado para sua rotina.”; explicação objetiva de terceirização e limpeza especializada; CTA Encontre sua solução e acesso direto ao WhatsApp. Composição usa material do site original e o início de atuação em 1991. Fotografias futuras ficam para outra etapa.
+2. **Hero:** “Limpeza para sua empresa. Cuidado para sua rotina.”; explicação objetiva de terceirização e cobertura de ausências; CTA Encontre sua solução e acesso direto ao WhatsApp. Composição usa material do site original e o início de atuação em 1991. Fotografias futuras ficam para outra etapa.
 3. **Compromissos em destaque:** equipe treinada/uniformizada, período integral ou meio período e contrato mensal — informações declaradas na página de terceirização.
 4. **Clientes:** seis logos da galeria institucional, apresentados como histórico de clientes. Sem dizer que são contratos atuais ou acrescentar avaliações.
-5. **Serviços:** terceirização em destaque; pós-obra, vidros, pisos/pedras e cobertura de ausências em uma lista com descrições e orçamento por serviço. Filtros distinguem serviços empresariais e especializados.
+5. **Serviços:** terceirização em destaque e cobertura de ausências, com descrição e orçamento por serviço.
 6. **Nossa história:** atuação desde 1991, missão e valores. Fundo azul profundo com contraste entre títulos, texto e detalhes verde-lima.
 7. **Diferenciais:** gente preparada; continuidade do serviço; estrutura de materiais e equipamentos; transparência da relação contratual. Quatro blocos com ícones, todos baseados no conteúdo institucional.
-8. **FAQ:** cinco dúvidas sobre período de contratação, substituições, equipamentos, serviços especializados e orçamento.
+8. **FAQ:** quatro dúvidas sobre período de contratação, substituições, equipamentos e orçamento.
 9. **Orçamento:** nome, telefone, cidade, serviço e detalhes opcionais; revisão da mensagem e envio pelo WhatsApp. Telefone e e-mail como alternativas.
 10. **Rodapé:** logo original, navegação, telefone, e-mail, Facebook e privacidade. CNPJ/endereço/mapa dependem de dados confirmados; não há cobertura geográfica inventada.
 
@@ -25,7 +25,7 @@ Toda afirmação institucional e cada ativo têm sua origem registrada em [Fonte
 
 **H1:** “Limpeza para sua empresa. Cuidado para sua rotina.”
 
-**Subtítulo:** “Terceirização e limpeza especializada, com profissionais treinados e uniformizados. Para sua empresa e para você.”
+**Subtítulo:** “Terceirização de limpeza e cobertura de ausências, com profissionais treinados e uniformizados. Para sua empresa e para você.”
 
 ### CTAs
 
@@ -42,12 +42,6 @@ Não prometer gratuidade, atendimento 24 horas ou resposta em um prazo sem valid
 
 **Terceirização de limpeza:** Profissionais de limpeza em período integral ou meio período. Equipe uniformizada e treinada, com materiais, produtos e equipamentos para a execução do serviço.
 
-**Limpeza pós-obra:** Limpeza ao final de construções e reformas de pequeno, médio ou grande porte. Atendimento a construtoras, arquitetos e pessoas físicas.
-
-**Limpeza de vidros:** Limpeza profissional de vidros com responsabilidade e cuidado na execução.
-
-**Tratamento de pisos e pedras:** Limpeza, impermeabilização e remoção de ceras e sujeiras acumuladas. Tratamento de ardósia, granito, porcelanato, cerâmica, granilite e outros materiais.
-
 **Cobertura de ausências:** Soluções para cobrir férias, faltas e afastamentos de funcionários de outras empresas.
 
 ### FAQ
@@ -55,13 +49,12 @@ Não prometer gratuidade, atendimento 24 horas ou resposta em um prazo sem valid
 1. **É possível contratar por meio período?** Sim. A Pratic Limp oferece terceirização de limpeza em período integral ou meio período. Fale com a equipe para alinhar a necessidade da sua empresa.
 2. **Como funciona a substituição de profissionais?** A empresa prevê substituições em caso de faltas, afastamentos, férias ou por solicitação do cliente. Consulte as condições para a sua contratação.
 3. **A empresa trabalha com materiais e equipamentos?** Sim. A execução dos serviços inclui o uso de materiais, produtos e equipamentos. Os detalhes do serviço devem ser alinhados na proposta.
-4. **Quais serviços especializados estão disponíveis?** Limpeza pós-obra, limpeza de vidros e tratamento de pisos e pedras, incluindo limpeza, impermeabilização e remoção de ceras e sujeiras acumuladas.
-5. **Como solicito um orçamento?** Preencha o formulário e revise a mensagem antes de continuar no WhatsApp. Você também pode ligar para (19) 97416-3336 ou enviar um e-mail para adm@praticlimp.com.br. Informe sua cidade para consultar a disponibilidade de atendimento.
+4. **Como solicito um orçamento?** Preencha o formulário e revise a mensagem antes de continuar no WhatsApp. Você também pode ligar para (19) 97416-3336 ou enviar um e-mail para adm@praticlimp.com.br. Informe sua cidade para consultar a disponibilidade de atendimento.
 
 ## 4. UX e direção visual
 
 - **Identidade:** logo vetorial fornecido; cores dos caminhos preservadas. Azul vivo e verde-lima da marca, com azul profundo como base de contraste. A gota é o favicon e um elemento discreto de assinatura.
-- **Transparência:** efeito de vidro com blur, saturação moderada, bordas luminosas e sombras discretas. Aplicado ao cabeçalho, selo de história, filtros, FAQ, formulário e widget. Textos permanecem opacos; fallback sólido para navegadores sem suporte.
+- **Transparência:** efeito de vidro com blur, saturação moderada, bordas luminosas e sombras discretas. Aplicado ao cabeçalho, selo de história, FAQ, formulário e widget. Textos permanecem opacos; fallback sólido para navegadores sem suporte.
 - **Composição:** hierarquia editorial, títulos amplos, espaços generosos e destaque maior para terceirização. O conteúdo não depende de uma galeria de fotografias genéricas.
 - **Motion:** entrada por deslocamento curto, transições dos filtros, feedback de contato e progresso de leitura. Respeita movimento reduzido; sem rolagem sequestrada, parallax ou vídeo automático.
 - **Mobile:** menu compacto, formulário adaptado, alvos de toque adequados e campos com 16 px. Foco visível, rótulos persistentes, link de pular conteúdo e FAQ nativo.

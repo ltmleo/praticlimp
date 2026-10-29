@@ -7,9 +7,9 @@ import QuoteForm from '../../src/components/QuoteForm';
 describe('orçamento', () => {
   it('recebe o serviço, permite revisão e monta o link sem enviar dados', async () => {
     const user = userEvent.setup();
-    const { rerender } = render(<QuoteForm selectedService="Limpeza pós-obra" />);
+    const { rerender } = render(<QuoteForm selectedService="Cobertura de ausências" />);
     const select = screen.getByLabelText('Qual serviço você precisa?');
-    expect(select).toHaveValue('Limpeza pós-obra');
+    expect(select).toHaveValue('Cobertura de ausências');
     rerender(<QuoteForm selectedService="Terceirização de limpeza" />);
     expect(select).toHaveValue('Terceirização de limpeza');
     await user.type(screen.getByLabelText('Seu nome'), '  Ana Silva  ');
@@ -33,20 +33,15 @@ describe('orçamento', () => {
 });
 
 describe('home', () => {
-  it('filtra serviços e leva a escolha para o orçamento', async () => {
+  it('lista apenas terceirização e cobertura e leva a escolha para o orçamento', async () => {
     const user = userEvent.setup();
     const { container } = render(<App />);
-    expect(container.querySelectorAll('.service')).toHaveLength(5);
-    await user.click(screen.getByRole('button', { name: /Para empresas/ }));
-    await waitFor(() => expect(container.querySelectorAll('.service')).toHaveLength(2));
-    await user.click(screen.getByRole('button', { name: /Limpeza especializada/ }));
-    await waitFor(() => expect(container.querySelectorAll('.service')).toHaveLength(3));
-    await user.click(screen.getByRole('link', { name: 'Solicitar orçamento: Limpeza pós-obra' }));
-    expect(screen.getByLabelText('Qual serviço você precisa?')).toHaveValue('Limpeza pós-obra');
+    expect(Array.from(container.querySelectorAll('.service h3'), h => h.textContent)).toEqual(['Terceirização de limpeza', 'Cobertura de ausências']);
+    expect(container.textContent).not.toMatch(/pós-obra|vidros|pisos/i);
+    await user.click(screen.getByRole('link', { name: 'Solicitar orçamento: Cobertura de ausências' }));
+    expect(screen.getByLabelText('Qual serviço você precisa?')).toHaveValue('Cobertura de ausências');
     await user.click(within(container.querySelector('.cost-section')! as HTMLElement).getByRole('link', { name: /Pedir orçamento/ }));
     expect(screen.getByLabelText('Qual serviço você precisa?')).toHaveValue('Terceirização de limpeza');
-    await user.click(screen.getByRole('button', { name: /Todos os serviços/ }));
-    await waitFor(() => expect(container.querySelectorAll('.service')).toHaveLength(5));
   });
 
   it('fecha o menu ao navegar e por Escape, restaurando o foco', async () => {
@@ -67,10 +62,10 @@ describe('home', () => {
   it('mantém a especialização no primeiro FAQ, com numeração e resposta', () => {
     const { container } = render(<App />);
     const items = container.querySelectorAll('.faq-list details');
-    expect(items).toHaveLength(7);
+    expect(items).toHaveLength(6);
     expect(items[0].querySelector('summary')).toHaveTextContent('Por que escolher a Pratic Limp em vez de uma empresa de facilities?');
     expect(items[0].querySelector('p')).toHaveTextContent('Porque limpeza é a nossa especialidade desde 1991.');
     expect(items[0].querySelector('p')).toHaveTextContent('as condições de substituição em faltas, férias e afastamentos');
-    expect(Array.from(items, item => item.querySelector('.faq-number')?.textContent)).toEqual(['01','02','03','04','05','06','07']);
+    expect(Array.from(items, item => item.querySelector('.faq-number')?.textContent)).toEqual(['01','02','03','04','05','06']);
   });
 });

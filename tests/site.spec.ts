@@ -5,22 +5,20 @@ test.beforeEach(async ({ page }) => {
  await page.route('https://www.googletagmanager.com/**', route => route.abort());
 });
 
-test('home, filters, FAQ and qualified WhatsApp message',async({page})=>{
+test('home, services, FAQ and qualified WhatsApp message',async({page})=>{
  const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));
  await page.goto(base);
  await expect(page.getByRole('heading',{level:1})).toContainText('em boas mãos');
- await expect(page.locator('.service')).toHaveCount(5);
- await page.getByRole('button',{name:/Limpeza especializada/}).click();
- await expect(page.locator('.service')).toHaveCount(3);
- await page.getByRole('link',{name:'Solicitar orçamento: Limpeza pós-obra'}).click();
- await expect(page.locator('#service')).toHaveValue('Limpeza pós-obra');
+ await expect(page.locator('.service')).toHaveCount(2);
+ await page.getByRole('link',{name:'Solicitar orçamento: Cobertura de ausências'}).click();
+ await expect(page.locator('#service')).toHaveValue('Cobertura de ausências');
  await page.getByLabel('Seu nome',{exact:true}).fill('Cliente de teste');
  await page.getByLabel('Telefone com DDD').fill('(19) 99999-1234');
  await page.getByLabel('Cidade',{exact:true}).fill('Campinas');
  await page.getByRole('button',{name:'Preparar mensagem'}).click();
  const href=await page.locator('#send-quote').getAttribute('href');
  expect(href).toContain('https://wa.me/5519974163336?text=');
- expect(decodeURIComponent(href!)).toContain('Serviço: Limpeza pós-obra');
+ expect(decodeURIComponent(href!)).toContain('Serviço: Cobertura de ausências');
  expect(decodeURIComponent(href!)).toContain('Cidade: Campinas');
  await page.getByLabel('Cidade',{exact:true}).fill('Valinhos');
  await expect(page.locator('#send-quote')).not.toBeVisible();
