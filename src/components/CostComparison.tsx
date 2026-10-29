@@ -18,7 +18,7 @@ const chartItems = [
   { label: 'Outros*', id: 'other' },
 ];
 
-export default function CostComparison({ onRequestQuote }: { onRequestQuote: () => void }) {
+export default function CostComparison() {
   const reducedMotion = useReducedMotion();
   const fillBar = reducedMotion ? undefined : { transform: ['scaleX(0)', 'scaleX(1)'] };
   const fillTransition = { duration: 1.25, ease: [0.22, 1, 0.36, 1] as const };
@@ -105,7 +105,7 @@ export default function CostComparison({ onRequestQuote }: { onRequestQuote: () 
 
         <div className="cost-action">
           <div><h3>Vale comparar o serviço completo.</h3><p>Peça uma proposta e veja o que a Pratic Limp pode assumir na sua rotina.</p></div>
-          <a href="#orcamento" className="button button-blue" onClick={onRequestQuote}>Pedir orçamento <Icon name="arrow" size={19}/></a>
+          <a href="#orcamento" className="button button-blue">Pedir orçamento <Icon name="arrow" size={19}/></a>
         </div>
       </div>
     </section>

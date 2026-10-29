@@ -37,11 +37,11 @@ O pipeline impede a publicação quando qualquer verificação falha.
 
 ## Organização dos componentes
 
-`src/pages/Home.tsx` reúne as seções na ordem da página e mantém o serviço escolhido para o orçamento.
+`src/pages/Home.tsx` reúne as seções na ordem da página.
 `src/App.tsx` seleciona a home ou a página de privacidade, inclusive na geração do HTML estático.
 
 - `src/components/layout`: barra superior, cabeçalho e rodapé. O cabeçalho controla seu menu.
-- `src/components/sections`: hero, diferenciais, clientes, serviços, história, compromisso, FAQ e contato. Serviços informa a escolha à Home.
+- `src/components/sections`: hero, diferenciais, clientes, serviço e benefícios, história, FAQ e contato.
 - `src/components`: marca, animação compartilhada, WhatsApp flutuante e os componentes existentes de formulário, comparativo e ícones.
 - `src/utils/site.ts`: caminho base, URLs de imagens e contato inicial pelo WhatsApp.
 

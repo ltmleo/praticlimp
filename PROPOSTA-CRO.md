@@ -14,7 +14,7 @@ Toda afirmação institucional e cada ativo têm sua origem registrada em [Fonte
 2. **Hero:** “Limpeza para sua empresa. Cuidado para sua rotina.”; explicação objetiva de terceirização e cobertura de ausências; CTA Encontre sua solução e acesso direto ao WhatsApp. Composição usa material do site original e o início de atuação em 1991. Fotografias futuras ficam para outra etapa.
 3. **Compromissos em destaque:** equipe treinada/uniformizada, período integral ou meio período e contrato mensal — informações declaradas na página de terceirização.
 4. **Clientes:** seis logos da galeria institucional, apresentados como histórico de clientes. Sem dizer que são contratos atuais ou acrescentar avaliações.
-5. **Serviços:** terceirização em destaque e cobertura de ausências, com descrição e orçamento por serviço.
+5. **Serviços:** terceirização como único serviço, ao lado dos benefícios incluídos (cobertura de ausências, profissionais preparados, materiais e equipamentos, responsabilidade na contratação).
 6. **Nossa história:** atuação desde 1991, missão e valores. Fundo azul profundo com contraste entre títulos, texto e detalhes verde-lima.
 7. **Diferenciais:** gente preparada; continuidade do serviço; estrutura de materiais e equipamentos; transparência da relação contratual. Quatro blocos com ícones, todos baseados no conteúdo institucional.
 8. **FAQ:** quatro dúvidas sobre período de contratação, substituições, equipamentos e orçamento.
