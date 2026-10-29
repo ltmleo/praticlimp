@@ -298,3 +298,20 @@ input, select, textarea {
   header .nav[data-tone="dark"] .menu-toggle span { background: #fff; }
   .floating-contact[data-tone="dark"] { background: #173b5826; color: #fff; }
 }
+
+/* Two service cards side by side: outsourcing in blue, absence cover on a light surface. */
+.services { grid-template-columns: 1fr 1fr; }
+.service-light {
+  background: linear-gradient(145deg, #ffffffeb, #eef6fbc7);
+  border-color: #fff;
+  color: var(--ink);
+  box-shadow: var(--glass-shadow);
+}
+.service-light::after { border-color: #c9e2ef; }
+.service-light .service-number { color: #76909a; }
+.service-light .service-top svg, .service-light li svg { color: var(--blue); }
+.service-light .service-content .eyebrow { color: var(--blue); }
+.service-light .service-content > p:not(.eyebrow) { color: var(--muted); }
+.service-light .service-link { border-top-color: var(--line); }
+@media(max-width:850px) { .services .service-featured .service-top svg { width: 40px; height: 40px; } }
+@media(max-width:620px) { .services { grid-template-columns: 1fr; } }

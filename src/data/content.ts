@@ -1,7 +1,7 @@
 // Source ledger: docs/fontes-e-conteudo.md. No unsupported factual claims.
 export const services = [
  {id:'terceirizacao',name:'Terceirização de limpeza',category:'empresarial',number:'01',icon:'building',tag:'LIMPEZA DO DIA A DIA',text:'Tenha profissionais treinados e uniformizados para a limpeza da sua empresa. A contratação pode ser em meio período ou período integral, com materiais e equipamentos conforme o serviço.',details:['Período integral ou meio período','Colaboradores treinados e uniformizados','Contrato com vigência mensal']},
- {id:'cobertura',name:'Cobertura de ausências',category:'empresarial',number:'02',icon:'people',tag:'FÉRIAS, FALTAS E AFASTAMENTOS',text:'Precisa cobrir férias, faltas ou afastamentos da sua equipe de limpeza? A Pratic Limp oferece esse serviço para empresas que já têm funcionários próprios.',details:[]},
+ {id:'cobertura',name:'Cobertura de ausências',category:'empresarial',number:'02',icon:'people',tag:'FÉRIAS, FALTAS E AFASTAMENTOS',text:'Precisa cobrir férias, faltas ou afastamentos da sua equipe de limpeza? A Pratic Limp oferece esse serviço para empresas que já têm funcionários próprios.',details:['Cobertura em férias','Reposição em faltas e afastamentos','Para empresas com equipe própria']},
 ];
 export const faq = [
  ['Por que escolher a Pratic Limp em vez de uma empresa de facilities?', 'Porque limpeza é a nossa especialidade desde 1991. Você contrata uma empresa focada em limpeza e conservação, com profissionais treinados para cuidar do seu espaço.\n\nSua proposta define o período de trabalho, os materiais, os equipamentos e as condições de substituição em faltas, férias e afastamentos. Você sabe o que está contratando e conta com uma empresa experiente justamente no serviço de que precisa.'],
