@@ -5,13 +5,10 @@ import App from '../../src/App';
 import QuoteForm from '../../src/components/QuoteForm';
 
 describe('orçamento', () => {
-  it('recebe o serviço, permite revisão e monta o link sem enviar dados', async () => {
+  it('pede o período e monta o link sem enviar dados', async () => {
     const user = userEvent.setup();
-    const { rerender } = render(<QuoteForm selectedService="Cobertura de ausências" />);
-    const select = screen.getByLabelText('Qual serviço você precisa?');
-    expect(select).toHaveValue('Cobertura de ausências');
-    rerender(<QuoteForm selectedService="Terceirização de limpeza" />);
-    expect(select).toHaveValue('Terceirização de limpeza');
+    render(<QuoteForm />);
+    await user.selectOptions(screen.getByLabelText('Período de trabalho'), 'Meio período');
     await user.type(screen.getByLabelText('Seu nome'), '  Ana Silva  ');
     await user.type(screen.getByLabelText('Telefone com DDD'), '(19) 99999-1234');
     await user.type(screen.getByLabelText('Cidade'), '  Campinas  ');
@@ -23,7 +20,7 @@ describe('orçamento', () => {
     expect(url.origin + url.pathname).toBe('https://wa.me/5519974163336');
     expect(url.searchParams.get('text')).toContain('Nome: Ana Silva\n');
     expect(url.searchParams.get('text')).toContain('Cidade: Campinas\n');
-    expect(url.searchParams.get('text')).toContain('Serviço: Terceirização de limpeza');
+    expect(url.searchParams.get('text')).toContain('Serviço: Terceirização de limpeza\nPeríodo: Meio período');
     expect(url.searchParams.get('text')).toContain('Detalhes: A combinar');
     await user.type(screen.getByLabelText(/Conte um pouco/), 'Escritório');
     await waitFor(() => expect(screen.queryByRole('link', { name: /Continuar no WhatsApp/ })).not.toBeInTheDocument());
@@ -33,15 +30,11 @@ describe('orçamento', () => {
 });
 
 describe('home', () => {
-  it('lista apenas terceirização e cobertura e leva a escolha para o orçamento', async () => {
-    const user = userEvent.setup();
+  it('apresenta a terceirização com a cobertura de ausências entre os benefícios', () => {
     const { container } = render(<App />);
-    expect(Array.from(container.querySelectorAll('.service h3'), h => h.textContent)).toEqual(['Terceirização de limpeza', 'Cobertura de ausências']);
+    expect(Array.from(container.querySelectorAll('.service h3'), h => h.textContent)).toEqual(['Terceirização de limpeza', 'Benefícios paraa sua empresa']);
+    expect(Array.from(container.querySelectorAll('.service-benefits h4'), h => h.textContent)).toEqual(['Cobertura de ausências', 'Profissionais preparados', 'Materiais e equipamentos', 'Responsabilidade na contratação']);
     expect(container.textContent).not.toMatch(/pós-obra|vidros|pisos/i);
-    await user.click(screen.getByRole('link', { name: 'Solicitar orçamento: Cobertura de ausências' }));
-    expect(screen.getByLabelText('Qual serviço você precisa?')).toHaveValue('Cobertura de ausências');
-    await user.click(within(container.querySelector('.cost-section')! as HTMLElement).getByRole('link', { name: /Pedir orçamento/ }));
-    expect(screen.getByLabelText('Qual serviço você precisa?')).toHaveValue('Terceirização de limpeza');
   });
 
   it('fecha o menu ao navegar e por Escape, restaurando o foco', async () => {
@@ -50,7 +43,7 @@ describe('home', () => {
     const toggle = screen.getByRole('button', { name: 'Abrir menu' });
     await user.click(toggle);
     expect(toggle).toHaveAttribute('aria-expanded', 'true');
-    await user.click(within(screen.getByRole('navigation')).getByRole('link', { name: 'Serviços' }));
+    await user.click(within(screen.getByRole('navigation')).getByRole('link', { name: 'Terceirização' }));
     expect(toggle).toHaveAttribute('aria-expanded', 'false');
     await user.click(toggle);
     within(screen.getByRole('navigation')).getByRole('link', { name: 'Clientes' }).focus();

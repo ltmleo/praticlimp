@@ -3,7 +3,7 @@
 Abra [a galeria](index.html) para comparar dois panfletos e dois cartões, todos
 frente e verso. Os PDFs estão em [output/pdf](../../output/pdf/).
 
-- **Panfleto institucional:** apresenta a marca, a terceirização de limpeza, a cobertura de ausências e os benefícios da contratação.
+- **Panfleto institucional:** apresenta a marca, a terceirização de limpeza e os benefícios incluídos, como a cobertura de ausências.
 - **Panfleto terceirização:** enfatiza a rotina de limpeza e a clareza na contratação.
 - **Cartão essencial:** marca e contatos em uma composição clara com curvas discretas.
 - **Cartão vidro suave:** mesma estrutura de contatos, com a marca em um painel claro.

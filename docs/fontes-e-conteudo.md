@@ -8,7 +8,7 @@ Verificação em 03/10/2026. O domínio [Pratic Limp](https://www.praticlimp.com
 | Transparência, responsabilidade, agilidade e confiança; missão e valores | [Sobre](https://luccatorres.wixsite.com/praticlimp/sobre) | Paráfrases fiéis. |
 | Profissionais treinados/uniformizados; meio período/integral; substituições em férias, faltas e afastamentos | [Terceirização](https://luccatorres.wixsite.com/praticlimp/terceirizacao-em-empresas) | Sem acrescentar SLA de resposta ou garantia de resultado. |
 | Materiais, produtos e equipamentos; contrato mensal; compromisso com encargos e benefícios | [Terceirização](https://luccatorres.wixsite.com/praticlimp/terceirizacao-em-empresas) | Não se afirma um preço inclusivo universal; escopo é alinhado na proposta. |
-| Cobertura de ausências | [Serviços](https://luccatorres.wixsite.com/praticlimp/copia-outros-servicos) | Com a terceirização, é uma das duas modalidades da interface e do formulário. Pós-obra, vidros e pisos e pedras não são divulgados. |
+| Cobertura de ausências | [Serviços](https://luccatorres.wixsite.com/praticlimp/copia-outros-servicos) | Apresentada como benefício incluído na terceirização, não como serviço à parte (orientação do usuário em 2026-10-29). Terceirização é o único serviço divulgado; pós-obra, vidros e pisos e pedras não são divulgados. |
 | Telefone (19) 97416-3336 e adm@praticlimp.com.br | [Contato](https://luccatorres.wixsite.com/praticlimp/contato) | Telefone preservado; WhatsApp confirmado pelo usuário. |
 | Divelp, Bandini, Metalfarma, Fatex, Volcano, Sega | [Clientes](https://luccatorres.wixsite.com/praticlimp/clientes), galeria do modelo Wix | Logos recuperados, identificados como histórico de clientes; sem afirmar que todos são contratos atuais. |
 
