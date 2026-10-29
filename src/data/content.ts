@@ -12,10 +12,11 @@ export const faq = [
  ['E se o profissional faltar?', 'A Pratic Limp prevê substituições em casos de faltas, férias e afastamentos, ou por solicitação do cliente. Na proposta, confirme como funciona a reposição para o seu local.'],
  ['Materiais e equipamentos estão incluídos?', 'A Pratic Limp trabalha com materiais, produtos e equipamentos para a execução da limpeza. Peça que a proposta detalhe o que está incluído no seu serviço.'],
  ['Vocês também fazem serviços pontuais?', 'Sim. Fazemos limpeza pós-obra, limpeza de vidros e tratamento de pisos e pedras. Esse tratamento inclui limpeza, impermeabilização e remoção de ceras e sujeiras acumuladas.'],
+ ['Quais cidades vocês atendem?', "Atendemos Americana, Santa Bárbara d'Oeste e Nova Odessa. Se o seu espaço fica em outra cidade da região, informe o endereço no pedido de orçamento para confirmarmos o atendimento."],
  ['Como peço um orçamento?', 'Informe a cidade, o serviço e um pouco sobre o local. O formulário prepara uma mensagem para você revisar e enviar pelo WhatsApp. Se preferir, ligue para (19) 97416-3336 ou escreva para adm@praticlimp.com.br.'],
 ];
 export const clients = [
- {name:'Divelp',file:'divelp.png'}, {name:'Bandini',file:'bandini.jpg'},
- {name:'Metalfarma',file:'metalfarma.png'}, {name:'Fatex',file:'fatex.jpg'},
- {name:'Volcano',file:'volcano.png'}, {name:'Sega',file:'sega.jpg'},
+ {name:'Divelp',file:'divelp.webp'}, {name:'Bandini',file:'bandini.webp'},
+ {name:'Metalfarma',file:'metalfarma.webp'}, {name:'Fatex',file:'fatex.webp'},
+ {name:'Volcano',file:'volcano.webp'}, {name:'Sega',file:'sega.webp'},
 ];

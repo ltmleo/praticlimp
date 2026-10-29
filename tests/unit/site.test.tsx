@@ -67,10 +67,10 @@ describe('home', () => {
   it('mantém a especialização no primeiro FAQ, com numeração e resposta', () => {
     const { container } = render(<App />);
     const items = container.querySelectorAll('.faq-list details');
-    expect(items).toHaveLength(6);
+    expect(items).toHaveLength(7);
     expect(items[0].querySelector('summary')).toHaveTextContent('Por que escolher a Pratic Limp em vez de uma empresa de facilities?');
     expect(items[0].querySelector('p')).toHaveTextContent('Porque limpeza é a nossa especialidade desde 1991.');
     expect(items[0].querySelector('p')).toHaveTextContent('as condições de substituição em faltas, férias e afastamentos');
-    expect(Array.from(items, item => item.querySelector('.faq-number')?.textContent)).toEqual(['01','02','03','04','05','06']);
+    expect(Array.from(items, item => item.querySelector('.faq-number')?.textContent)).toEqual(['01','02','03','04','05','06','07']);
   });
 });

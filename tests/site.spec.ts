@@ -116,6 +116,8 @@ test('HTML contains main content without JavaScript',async({browser})=>{
 test('GA4 tag is installed with the configured measurement id',async({page})=>{
  await page.route('https://www.googletagmanager.com/**',route=>route.abort());
  await page.goto(base);
+ await expect(page.locator('script[src*="G-HTV2EWQWDX"]')).toHaveCount(0);
+ await page.keyboard.press('Shift');
  await expect(page.locator('script[src*="G-HTV2EWQWDX"]')).toHaveCount(1);
  expect(await page.evaluate(()=>(window as typeof window & {dataLayer?:unknown[]}).dataLayer?.some((entry:any)=>entry?.[0]==='config'&&entry?.[1]==='G-HTV2EWQWDX'))).toBe(true);
 });

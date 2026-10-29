@@ -79,7 +79,8 @@ para texto grande e elementos funcionais.
 | [pratic-limp.svg](../public/brand/pratic-limp.svg) | Marca completa usada no desktop |
 | [pratic-limp-horizontal.svg](../public/brand/pratic-limp-horizontal.svg) | Espaços horizontais e compactos; usada no mobile |
 | [pratic-limp-gota.svg](../public/brand/pratic-limp-gota.svg) | Símbolo auxiliar, nunca substituto único da identificação em uma peça de primeiro contato |
-| [terceirizacao.png](../public/brand/terceirizacao.png) | Imagem principal do hero |
+| [terceirizacao.png](../public/brand/terceirizacao.png) | Imagem principal do hero; o site serve as versões `terceirizacao.webp` e `terceirizacao-320.webp` |
+| [og-image.png](../public/og-image.png) | Prévia de compartilhamento 1200 × 630, gerada por `scripts/build-og-image.mjs` |
 | [sobre.png](../public/brand/sobre.png) | Ativo disponível; avaliar adequação e resolução antes de aplicar |
 
 Use SVG para a marca sempre que o formato permitir. Não redesenhe, distorça,
@@ -263,7 +264,7 @@ Consultar [company.ts](../src/data/company.ts),
 [content.ts](../src/data/content.ts) e
 [fontes-e-conteudo.md](fontes-e-conteudo.md) antes de inserir contatos, serviços,
 condições ou afirmações comerciais. Não preencher endereço, CNPJ ou cobertura
-com suposições. Manter os dados em sua fonte de origem, sem usar este guia como
+com suposições; use os valores confirmados em `company.ts`. Manter os dados em sua fonte de origem, sem usar este guia como
 cadastro comercial.
 
 ## 13. Materiais anteriores e manutenção

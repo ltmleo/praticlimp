@@ -51,7 +51,9 @@ Logos de clientes, prefixo `https://static.wixstatic.com/media/`:
 
 ## Informações não publicadas
 
-Não foram confirmados CNPJ, endereço, cidades atendidas, quantidade de clientes, avaliações, depoimentos, certificações, produtos biodegradáveis ou atendimento 24 horas. Nada disso foi inventado. Residencial, industrial e condomínios não aparecem como modalidades específicas porque não foram confirmadas nas páginas recuperadas.
+CNPJ 17.878.213/0001-13 e atendimento em Americana, Santa Bárbara d'Oeste e Nova Odessa foram confirmados pelo usuário em 24/10/2026 e publicados no rodapé, no contato, no FAQ e nos dados estruturados. Preço e prazos de resposta ou de início não serão divulgados; ficam para a proposta.
+
+Não foram confirmados endereço, quantidade de clientes, avaliações, depoimentos, certificações, produtos biodegradáveis ou atendimento 24 horas. Nada disso foi inventado. Residencial, industrial e condomínios não aparecem como modalidades específicas porque não foram confirmadas nas páginas recuperadas.
 
 Os títulos de campanha são novos textos de apresentação; as afirmações factuais obedecem às fontes acima. Formulário e FAQ sobre o envio descrevem o funcionamento real da nova interface.
 
