@@ -329,3 +329,14 @@ input, select, textarea {
   .service-benefits .benefit-icon { width: 40px; height: 40px; }
   .service-benefits h4 { font-size: 16px; }
 }
+/* Content starts below the icon; card height follows the benefits panel. */
+.services .service-featured { min-height: 0; }
+.services .service-featured .service-top { flex: 0 0 auto; min-height: 0; margin-bottom: 14px; }
+/* Coverage block fills the card's lower space above the quote link. */
+.service-area { margin: auto 0 26px; display: flex; gap: 14px; align-items: center; padding: 16px 18px; border: 1px solid #ffffff38; border-radius: 18px; background: #ffffff14; box-shadow: inset 0 1px 0 #ffffff26; }
+.service-area svg { flex: none; color: var(--lime); }
+.service-area p { margin: 0; font-size: 15px; line-height: 1.5; color: #fff; }
+.service-area small { display: block; font-size: 11px; letter-spacing: 1px; color: #c4e3f2; margin-bottom: 2px; }
+.services .service-featured ul { margin-bottom: 36px; }
+.services .service-benefits ul { margin: 0; }
+@media(max-width:620px) { .services .service-featured .service-top { margin-bottom: 10px; } }
