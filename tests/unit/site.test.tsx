@@ -37,13 +37,15 @@ describe('home', () => {
     expect(container.textContent).not.toMatch(/pós-obra|vidros|pisos/i);
   });
 
-  it('lista os principais clientes pelo nome', () => {
+  it('mostra os principais clientes em carrossel, com a cópia oculta para leitores de tela', () => {
     const { container } = render(<App />);
-    expect(container.querySelector('#clientes .eyebrow')).toHaveTextContent('NOSSOS PRINCIPAISCLIENTES.');
-    const names = Array.from(container.querySelectorAll('.client-names li'), li => li.textContent);
-    expect(names).toHaveLength(13);
-    expect(names).toContain('Shopping Via Direta');
-    expect(container.querySelectorAll('#clientes img')).toHaveLength(0);
+    expect(container.querySelector('#clientes .eyebrow')).toHaveTextContent('NOSSOS PRINCIPAIS CLIENTES');
+    const [list, copy] = container.querySelectorAll('.client-track');
+    expect(list).toHaveAccessibleName('Principais clientes');
+    expect(copy).toHaveAttribute('aria-hidden', 'true');
+    expect(list.querySelectorAll('li')).toHaveLength(13);
+    expect(within(list as HTMLElement).getByRole('img', { name: 'Bandini' })).toBeInTheDocument();
+    expect(list).toHaveTextContent('Shopping Via Direta');
   });
 
   it('fecha o menu ao navegar e por Escape, restaurando o foco', async () => {

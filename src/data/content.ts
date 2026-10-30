@@ -18,7 +18,8 @@ export const faq = [
  ['Como peço um orçamento?', 'Informe a cidade, o serviço e um pouco sobre o local. O formulário prepara uma mensagem para você revisar e enviar pelo WhatsApp. Se preferir, ligue para (19) 97416-3336 ou escreva para adm@praticlimp.com.br.'],
 ];
 // Lista informada pelo usuário em 2026-10-30. Grafia não confirmada publicamente: Nova Juliem, Textk, AS Park e Tauá Biodiesel.
-export const clients = [
- 'Tauá Biodiesel', 'Bandini', 'Supermercados Crema', 'Welcome Center', 'Nova Juliem', 'Shopping Via Direta', 'Droga Pires',
- 'Metalfarma', 'Textk', 'Smart Mall', 'Max Água', 'Contabilidade Giordano', 'AS Park',
+export const clients: { name: string; logo?: string }[] = [
+ {name:'Tauá Biodiesel'}, {name:'Bandini',logo:'bandini.webp'}, {name:'Supermercados Crema'}, {name:'Welcome Center'},
+ {name:'Nova Juliem'}, {name:'Shopping Via Direta'}, {name:'Droga Pires'}, {name:'Metalfarma',logo:'metalfarma.webp'},
+ {name:'Textk'}, {name:'Smart Mall'}, {name:'Max Água'}, {name:'Contabilidade Giordano'}, {name:'AS Park'},
 ];

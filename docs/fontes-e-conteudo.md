@@ -10,7 +10,7 @@ Verificação em 03/10/2026. O domínio [Pratic Limp](https://www.praticlimp.com
 | Materiais, produtos e equipamentos; contrato mensal; compromisso com encargos e benefícios | [Terceirização](https://luccatorres.wixsite.com/praticlimp/terceirizacao-em-empresas) | Não se afirma um preço inclusivo universal; escopo é alinhado na proposta. |
 | Cobertura de ausências | [Serviços](https://luccatorres.wixsite.com/praticlimp/copia-outros-servicos) | Apresentada como benefício incluído na terceirização, não como serviço à parte (orientação do usuário em 2026-10-29). Terceirização é o único serviço divulgado; pós-obra, vidros e pisos e pedras não são divulgados. |
 | Telefone (19) 97416-3336 e adm@praticlimp.com.br | [Contato](https://luccatorres.wixsite.com/praticlimp/contato) | Telefone preservado; WhatsApp confirmado pelo usuário. |
-| Tauá Biodiesel, Bandini, Supermercados Crema, Welcome Center, Nova Juliem, Shopping Via Direta, Droga Pires, Metalfarma, Textk, Smart Mall, Max Água, Contabilidade Giordano, AS Park | Lista informada pelo usuário em 2026-10-30 | Apresentados como "Nossos principais clientes", só com o nome, sem logos. Grafia de Nova Juliem, Textk, AS Park e Tauá Biodiesel não confirmada publicamente. |
+| Tauá Biodiesel, Bandini, Supermercados Crema, Welcome Center, Nova Juliem, Shopping Via Direta, Droga Pires, Metalfarma, Textk, Smart Mall, Max Água, Contabilidade Giordano, AS Park | Lista informada pelo usuário em 2026-10-30 | Apresentados em carrossel como "Nossos principais clientes". Bandini e Metalfarma usam os logos do site original; os demais aparecem pelo nome até haver logos. Grafia de Nova Juliem, Textk, AS Park e Tauá Biodiesel não confirmada publicamente. |
 
 ## Pesquisa fiscal interna
 
@@ -37,7 +37,7 @@ Permanecem pendentes de confirmação pelos proprietários: valor mensal fixo, r
 - `public/brand/logo_vazado.svg`: arquivo preexistente com PNG embutido; preservado, mas não utilizado como logo vetorial.
 - `public/brand/terceirizacao.png`: imagem publicada no site original, [arquivo](https://static.wixstatic.com/media/a333f8_a4a474c7b35b4249baea60f94a358c46~mv2.png). Não é apresentada como fotografia comprovada de um funcionário.
 
-Os logos de clientes do site original deixaram de ser usados em 2026-10-30.
+Dos logos de clientes do site original, só Bandini (`a333f8_c4b7ddbe4b0a4b78bf6e0b1608447369~mv2.jpg`) e Metalfarma (`a333f8_a4c96dc8bc094faf94d68f9a42cb6ff6~mv2.png`), prefixo `https://static.wixstatic.com/media/`, continuam em uso.
 
 ## Informações não publicadas
 
