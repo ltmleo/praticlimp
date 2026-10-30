@@ -11,14 +11,13 @@ test('home, services, FAQ and qualified WhatsApp message',async({page})=>{
  await expect(page.getByRole('heading',{level:1})).toContainText('em boas mãos');
  await expect(page.locator('.service-benefits h4').first()).toHaveText('Cobertura de ausências');
  await page.getByRole('link',{name:'Solicitar orçamento: Terceirização de limpeza'}).click();
- await page.locator('#period').selectOption('Período integral');
  await page.getByLabel('Seu nome',{exact:true}).fill('Cliente de teste');
  await page.getByLabel('Telefone com DDD').fill('(19) 99999-1234');
  await page.getByLabel('Cidade',{exact:true}).fill('Campinas');
  await page.getByRole('button',{name:'Preparar mensagem'}).click();
  const href=await page.locator('#send-quote').getAttribute('href');
  expect(href).toContain('https://wa.me/5519974163336?text=');
- expect(decodeURIComponent(href!)).toContain('Período: Período integral');
+ expect(decodeURIComponent(href!)).not.toContain('Período');
  expect(decodeURIComponent(href!)).toContain('Cidade: Campinas');
  await page.getByLabel('Cidade',{exact:true}).fill('Valinhos');
  await expect(page.locator('#send-quote')).not.toBeVisible();
@@ -134,7 +133,6 @@ test('native validation, mobile brand, telephone links and Escape',async({page})
  await page.locator('#name').fill('   ');
  await page.locator('#city').fill('   ');
  await page.locator('#phone').fill('123');
- await page.locator('#period').selectOption('Meio período');
  await page.getByRole('button',{name:/Preparar mensagem/}).click();
  await expect(page.locator('#send-quote')).toHaveCount(0);
  for (const id of ['name','city','phone']) expect(await page.locator('#'+id).evaluate((input:HTMLInputElement)=>input.checkValidity())).toBe(false);

@@ -1,6 +1,6 @@
 // Source ledger: docs/fontes-e-conteudo.md. No unsupported factual claims.
 export const services = [
- {id:'terceirizacao',name:'Terceirização de limpeza',icon:'building',tag:'LIMPEZA DO DIA A DIA',text:'Uma equipe da Pratic Limp cuida da limpeza da sua empresa, em meio período ou período integral. A proposta define o período de trabalho e o que está incluído no serviço.',details:['Período integral ou meio período','Contrato com vigência mensal','Proposta conforme a rotina do seu espaço']},
+ {id:'terceirizacao',name:'Terceirização de limpeza',icon:'building',tag:'LIMPEZA DO DIA A DIA',text:'Uma equipe da Pratic Limp cuida da limpeza da sua empresa em período integral. A proposta define o que está incluído no serviço.',details:['Equipe em período integral','Contrato com vigência mensal','Proposta conforme a rotina do seu espaço']},
 ];
 // Benefícios incluídos na terceirização; a cobertura de ausências não é contratada à parte.
 export const benefits = [
@@ -11,7 +11,7 @@ export const benefits = [
 ];
 export const faq = [
  ['Por que escolher a Pratic Limp em vez de uma empresa de facilities?', 'Porque limpeza é a nossa especialidade desde 1991. Você contrata uma empresa focada em limpeza e conservação, com profissionais treinados para cuidar do seu espaço.\n\nSua proposta define o período de trabalho, os materiais, os equipamentos e as condições de substituição em faltas, férias e afastamentos. Você sabe o que está contratando e conta com uma empresa experiente justamente no serviço de que precisa.'],
- ['Vocês atendem em meio período?', 'Sim. Você pode contratar a limpeza em meio período ou período integral. Conte como funciona a sua empresa para conversar com a equipe sobre o período de trabalho.'],
+ ['Em qual período a equipe trabalha?', 'A terceirização é contratada em período integral. Conte como funciona a sua empresa para alinhar a rotina de limpeza com a equipe.'],
  ['E se o profissional faltar?', 'A Pratic Limp prevê substituições em casos de faltas, férias e afastamentos, ou por solicitação do cliente. Na proposta, confirme como funciona a reposição para o seu local.'],
  ['Materiais e equipamentos estão incluídos?', 'A Pratic Limp trabalha com materiais, produtos e equipamentos para a execução da limpeza. Peça que a proposta detalhe o que está incluído no seu serviço.'],
  ['Quais cidades vocês atendem?', "Atendemos Americana, Santa Bárbara d'Oeste e Nova Odessa. Se o seu espaço fica em outra cidade da região, informe o endereço no pedido de orçamento para confirmarmos o atendimento."],

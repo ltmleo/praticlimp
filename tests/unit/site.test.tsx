@@ -5,10 +5,9 @@ import App from '../../src/App';
 import QuoteForm from '../../src/components/QuoteForm';
 
 describe('orçamento', () => {
-  it('pede o período e monta o link sem enviar dados', async () => {
+  it('monta o link sem enviar dados', async () => {
     const user = userEvent.setup();
     render(<QuoteForm />);
-    await user.selectOptions(screen.getByLabelText('Período de trabalho'), 'Meio período');
     await user.type(screen.getByLabelText('Seu nome'), '  Ana Silva  ');
     await user.type(screen.getByLabelText('Telefone com DDD'), '(19) 99999-1234');
     await user.type(screen.getByLabelText('Cidade'), '  Campinas  ');
@@ -20,7 +19,7 @@ describe('orçamento', () => {
     expect(url.origin + url.pathname).toBe('https://wa.me/5519974163336');
     expect(url.searchParams.get('text')).toContain('Nome: Ana Silva\n');
     expect(url.searchParams.get('text')).toContain('Cidade: Campinas\n');
-    expect(url.searchParams.get('text')).toContain('Serviço: Terceirização de limpeza\nPeríodo: Meio período');
+    expect(url.searchParams.get('text')).toContain('Serviço: Terceirização de limpeza\nDetalhes: A combinar');
     expect(url.searchParams.get('text')).toContain('Detalhes: A combinar');
     await user.type(screen.getByLabelText(/Conte um pouco/), 'Escritório');
     await waitFor(() => expect(screen.queryByRole('link', { name: /Continuar no WhatsApp/ })).not.toBeInTheDocument());
@@ -34,7 +33,7 @@ describe('home', () => {
     const { container } = render(<App />);
     expect(Array.from(container.querySelectorAll('.service h3'), h => h.textContent)).toEqual(['Terceirização de limpeza', 'Benefícios paraa sua empresa']);
     expect(Array.from(container.querySelectorAll('.service-benefits h4'), h => h.textContent)).toEqual(['Cobertura de ausências', 'Profissionais preparados', 'Materiais e equipamentos', 'Responsabilidade na contratação']);
-    expect(container.textContent).not.toMatch(/pós-obra|vidros|pisos/i);
+    expect(container.textContent).not.toMatch(/pós-obra|vidros|pisos|meio período/i);
   });
 
   it('mostra os principais clientes em carrossel, com a cópia oculta para leitores de tela', () => {

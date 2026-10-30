@@ -11,13 +11,12 @@ export default function QuoteForm() {
  useEffect(()=>{if(message)output.current?.focus()},[message]);
  function prepare(event:FormEvent<HTMLFormElement>) {
   event.preventDefault(); const data=new FormData(event.currentTarget);
-  setMessage(`Olá, Pratic Limp! Gostaria de solicitar um orçamento.\n\nNome: ${String(data.get('name')).trim()}\nTelefone: ${data.get('phone')}\nCidade: ${String(data.get('city')).trim()}\nServiço: Terceirização de limpeza\nPeríodo: ${data.get('period')}\nDetalhes: ${String(data.get('message')).trim() || 'A combinar'}`);
+  setMessage(`Olá, Pratic Limp! Gostaria de solicitar um orçamento.\n\nNome: ${String(data.get('name')).trim()}\nTelefone: ${data.get('phone')}\nCidade: ${String(data.get('city')).trim()}\nServiço: Terceirização de limpeza\nDetalhes: ${String(data.get('message')).trim() || 'A combinar'}`);
  }
  return <form id="quote-form" onSubmit={prepare} onChange={()=>{if(message)setMessage('')}}>
  <h3>Peça um orçamento</h3><p>Conte o que precisa. Você revisa a mensagem antes de enviá-la pelo WhatsApp.</p>
  <label htmlFor="name">Seu nome</label><input id="name" name="name" autoComplete="name" placeholder="Como podemos chamar você?" required pattern=".*\S.*" maxLength={100}/>
  <div className="form-row"><div><label htmlFor="phone">Telefone com DDD</label><input id="phone" name="phone" type="tel" autoComplete="tel" placeholder="(19) 99999-9999" required maxLength={20} onInput={event=>{const field=event.currentTarget;const digits=field.value.replace(/\D/g,'');field.setCustomValidity(digits.length>=10&&digits.length<=13?'':'Informe um telefone válido com DDD.')}}/></div><div><label htmlFor="city">Cidade</label><input id="city" name="city" autoComplete="address-level2" placeholder="Sua cidade" required pattern=".*\S.*" maxLength={100}/></div></div>
- <label htmlFor="period">Período de trabalho</label><select id="period" name="period" required defaultValue=""><option value="" disabled>Selecione o período</option><option>Meio período</option><option>Período integral</option><option>Ainda não sei</option></select>
  <label htmlFor="message">Conte um pouco sobre o espaço <span>(opcional)</span></label><textarea id="message" name="message" rows={3} placeholder="Tipo de empresa, tamanho do espaço e frequência da limpeza." maxLength={1000}/>
  <p className="privacy-note">Seus dados serão incluídos apenas na mensagem que você decidir enviar. <a href={privacyUrl}>Saiba mais</a>.</p>
  <motion.button disabled={!ready} whileTap={{scale:0.98}} className="button" type="submit">Preparar mensagem <Icon name="arrow" size={19}/></motion.button>
