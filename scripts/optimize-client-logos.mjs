@@ -24,12 +24,34 @@ try {
       await img.decode();
       // SVGs sem dimensões intrínsecas são desenhados no tamanho máximo.
       const nw = img.naturalWidth || 300, nh = img.naturalHeight || 156;
-      const scale = Math.min(300 / nw, 156 / nh, img.naturalWidth ? 1 : Infinity);
-      const canvas = Object.assign(document.createElement('canvas'), { width: Math.round(nw * scale), height: Math.round(nh * scale) });
+      const full = Object.assign(document.createElement('canvas'), { width: nw, height: nh });
+      const fctx = full.getContext('2d', { willReadFrequently: true });
+      fctx.drawImage(img, 0, 0, nw, nh);
+      const pixels = fctx.getImageData(0, 0, nw, nh), d = pixels.data;
+      // Fundo chapado claro (JPGs sem transparência): a cor dos cantos vira transparente, com borda suave.
+      const corners = [0, nw - 1, (nh - 1) * nw, nh * nw - 1].map(i => d.slice(i * 4, i * 4 + 4));
+      const [br, bg, bb] = corners[0];
+      const flat = corners.every(c => c[3] === 255 && Math.abs(c[0] - br) + Math.abs(c[1] - bg) + Math.abs(c[2] - bb) < 24);
+      if (flat && 0.299 * br + 0.587 * bg + 0.114 * bb > 230) {
+        for (let i = 0; i < d.length; i += 4) {
+          const dist = Math.max(Math.abs(d[i] - br), Math.abs(d[i + 1] - bg), Math.abs(d[i + 2] - bb));
+          d[i + 3] = Math.min(d[i + 3], Math.max(0, Math.min(255, (dist - 12) * 8)));
+        }
+        fctx.putImageData(pixels, 0, 0);
+      }
+      // Recorta as margens transparentes para que todos os logos ocupem o cartão por igual.
+      let x0 = nw, y0 = nh, x1 = -1, y1 = -1;
+      for (let y = 0; y < nh; y++) for (let x = 0; x < nw; x++) if (d[(y * nw + x) * 4 + 3] > 16) {
+        x0 = Math.min(x0, x); x1 = Math.max(x1, x); y0 = Math.min(y0, y); y1 = Math.max(y1, y);
+      }
+      if (x1 < 0) { x0 = y0 = 0; x1 = nw - 1; y1 = nh - 1; }
+      const cw = x1 - x0 + 1, ch = y1 - y0 + 1;
+      const scale = Math.min(300 / cw, 156 / ch, img.naturalWidth ? 1 : Infinity);
+      const canvas = Object.assign(document.createElement('canvas'), { width: Math.round(cw * scale), height: Math.round(ch * scale) });
       const ctx = canvas.getContext('2d');
       ctx.imageSmoothingQuality = 'high';
-      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-      return canvas.toDataURL('image/webp', 0.85).split(',')[1];
+      ctx.drawImage(full, x0, y0, cw, ch, 0, 0, canvas.width, canvas.height);
+      return canvas.toDataURL('image/webp', 0.7).split(',')[1];
     }, data);
     const out = path.join(target, path.basename(file, path.extname(file)) + '.webp');
     const buffer = Buffer.from(webp, 'base64');

@@ -44,8 +44,13 @@ describe('home', () => {
     expect(list).toHaveAccessibleName('Principais clientes');
     expect(copy).toHaveAttribute('aria-hidden', 'true');
     expect(list.querySelectorAll('li')).toHaveLength(11);
-    expect(within(list as HTMLElement).getByRole('img', { name: 'Bandini' })).toBeInTheDocument();
-    expect(list).toHaveTextContent('Shopping Via Direta');
+    // Todos têm logo; o Welcome Center mostra o nome abaixo do símbolo, então a imagem é decorativa.
+    expect(Array.from(within(list as HTMLElement).getAllByRole('img'), img => img.getAttribute('alt'))).toEqual([
+      'Tauá Biodiesel', 'Bandini', 'Supermercados Crema', 'Nova Giulen', 'Shopping Via Direta', 'Droga Pires',
+      'Metalfarma', 'Smart Mall', 'Maxi Água', 'Contabilidade Giordano',
+    ]);
+    expect(list).toHaveTextContent('Welcome Center');
+    expect(copy.querySelectorAll('img[alt=""]')).toHaveLength(11);
   });
 
   it('fecha o menu ao navegar e por Escape, restaurando o foco', async () => {

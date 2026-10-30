@@ -21,6 +21,8 @@ export default function useGlassTone<T extends HTMLElement>(sticky = false) {
       // Use the header's pinned position; its initial position includes the top bar.
       const y = Math.min(innerHeight - 1, Math.max(0,
         rect.top + rect.height / 2 - (header?.getBoundingClientRect().top ?? 0)));
+      // A hidden or zero-sized viewport would yield negative insets, which IntersectionObserver rejects.
+      const inset = (n: number) => `-${Math.max(0, n)}px`;
       const intersecting = new Set<Element>();
       observer = new IntersectionObserver(entries => {
         for (const entry of entries) {
@@ -29,7 +31,7 @@ export default function useGlassTone<T extends HTMLElement>(sticky = false) {
         }
         setTone(intersecting.size ? 'dark' : 'light');
       }, {
-        rootMargin: `-${y}px -${innerWidth - x - 1}px -${innerHeight - y - 1}px -${x}px`,
+        rootMargin: [y, innerWidth - x - 1, innerHeight - y - 1, x].map(inset).join(' '),
         threshold: 0,
       });
       document.querySelectorAll('.about, .expertise-strip, .service-featured, .cost-salary')

@@ -18,8 +18,13 @@ export const faq = [
  ['Como peço um orçamento?', 'Informe a cidade, o serviço e um pouco sobre o local. O formulário prepara uma mensagem para você revisar e enviar pelo WhatsApp. Se preferir, ligue para (19) 97416-3336 ou escreva para adm@praticlimp.com.br.'],
 ];
 // Lista informada e corrigida pelo usuário em 2026-10-30. Textk e AS Park aguardam confirmação e ficam de fora.
-export const clients: { name: string; logo?: string }[] = [
- {name:'Tauá Biodiesel'}, {name:'Bandini',logo:'bandini.webp'}, {name:'Supermercados Crema'}, {name:'Welcome Center'},
- {name:'Nova Giulen'}, {name:'Shopping Via Direta'}, {name:'Droga Pires'}, {name:'Metalfarma',logo:'metalfarma.webp'},
- {name:'Smart Mall'}, {name:'Maxi Águas'}, {name:'Contabilidade Giordano'},
+export const clients: { name: string; logo?: string; showName?: boolean }[] = [
+ {name:'Tauá Biodiesel',logo:'clientes/taua-biodiesel.webp'}, {name:'Bandini',logo:'bandini.webp'},
+ {name:'Supermercados Crema',logo:'clientes/supermercados-crema.webp'},
+ // O logo do Welcome Center é só o símbolo "W"; o nome aparece abaixo dele.
+ {name:'Welcome Center',logo:'clientes/welcome-center.webp',showName:true},
+ {name:'Nova Giulen',logo:'clientes/nova-giulen.webp'}, {name:'Shopping Via Direta',logo:'clientes/shopping-via-direta.webp'},
+ {name:'Droga Pires',logo:'clientes/droga-pires.webp'}, {name:'Metalfarma',logo:'metalfarma.webp'},
+ {name:'Smart Mall',logo:'clientes/smart-mall.webp'}, {name:'Maxi Água',logo:'clientes/maxi-agua.webp'},
+ {name:'Contabilidade Giordano',logo:'clientes/contabilidade-giordano.webp'},
 ];
