@@ -7,6 +7,7 @@
     "dev": "vite --host 0.0.0.0",
     "build": "tsc --noEmit && vite build && node scripts/prerender.mjs && node scripts/build-gallery.mjs",
     "build:gallery": "node scripts/build-gallery.mjs",
+    "logos": "node scripts/optimize-client-logos.mjs",
     "preview": "vite preview --host 0.0.0.0",
     "pretest": "playwright install chromium",
     "test": "playwright test",

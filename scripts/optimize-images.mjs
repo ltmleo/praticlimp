@@ -6,7 +6,7 @@ import { readFile, writeFile } from 'node:fs/promises';
 const jobs = [
   ['terceirizacao.png', 'terceirizacao.webp', 472],
   ['terceirizacao.png', 'terceirizacao-320.webp', 320],
-  ...['divelp.png', 'bandini.jpg', 'metalfarma.png', 'fatex.jpg', 'volcano.png', 'sega.jpg'].map(file => [file, file.replace(/\.\w+$/, '.webp'), 220]),
+  // bandini.webp e metalfarma.webp foram gerados de bandini.jpg e metalfarma.png (220 px), que não estão mais no repositório.
 ];
 
 const browser = await chromium.launch({ channel: 'chrome', headless: true });

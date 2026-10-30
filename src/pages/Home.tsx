@@ -21,9 +21,9 @@ export default function Home() {
    <main id="conteudo">
     <Hero />
     <ExpertiseStrip />
-    <Clients />
     <Services />
     <About />
+    <Clients />
     <CostComparison />
     <FAQ />
     <Contact />
