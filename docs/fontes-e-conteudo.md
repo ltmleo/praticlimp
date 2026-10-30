@@ -10,7 +10,7 @@ Verificação em 03/10/2026. O domínio [Pratic Limp](https://www.praticlimp.com
 | Materiais, produtos e equipamentos; contrato mensal; compromisso com encargos e benefícios | [Terceirização](https://luccatorres.wixsite.com/praticlimp/terceirizacao-em-empresas) | Não se afirma um preço inclusivo universal; escopo é alinhado na proposta. |
 | Cobertura de ausências | [Serviços](https://luccatorres.wixsite.com/praticlimp/copia-outros-servicos) | Apresentada como benefício incluído na terceirização, não como serviço à parte (orientação do usuário em 2026-10-29). Terceirização é o único serviço divulgado; pós-obra, vidros e pisos e pedras não são divulgados. |
 | Telefone (19) 97416-3336 e adm@praticlimp.com.br | [Contato](https://luccatorres.wixsite.com/praticlimp/contato) | Telefone preservado; WhatsApp confirmado pelo usuário. |
-| Divelp, Bandini, Metalfarma, Fatex, Volcano, Sega | [Clientes](https://luccatorres.wixsite.com/praticlimp/clientes), galeria do modelo Wix | Logos recuperados, identificados como histórico de clientes; sem afirmar que todos são contratos atuais. |
+| Tauá Biodiesel, Bandini, Supermercados Crema, Welcome Center, Nova Juliem, Shopping Via Direta, Droga Pires, Metalfarma, Textk, Smart Mall, Max Água, Contabilidade Giordano, AS Park | Lista informada pelo usuário em 2026-10-30 | Apresentados como "Nossos principais clientes", só com o nome, sem logos. Grafia de Nova Juliem, Textk, AS Park e Tauá Biodiesel não confirmada publicamente. |
 
 ## Pesquisa fiscal interna
 
@@ -37,16 +37,7 @@ Permanecem pendentes de confirmação pelos proprietários: valor mensal fixo, r
 - `public/brand/logo_vazado.svg`: arquivo preexistente com PNG embutido; preservado, mas não utilizado como logo vetorial.
 - `public/brand/terceirizacao.png`: imagem publicada no site original, [arquivo](https://static.wixstatic.com/media/a333f8_a4a474c7b35b4249baea60f94a358c46~mv2.png). Não é apresentada como fotografia comprovada de um funcionário.
 
-Logos de clientes, prefixo `https://static.wixstatic.com/media/`:
-
-| Cliente | Arquivo original |
-| --- | --- |
-| Divelp | a333f8_8149dac903874704a6181d2b304007b5~mv2.png |
-| Bandini | a333f8_c4b7ddbe4b0a4b78bf6e0b1608447369~mv2.jpg |
-| Metalfarma | a333f8_a4c96dc8bc094faf94d68f9a42cb6ff6~mv2.png |
-| Fatex | a333f8_2a9275cfb5f94a8a9c5e9ec17a8d6e95~mv2.jpg |
-| Volcano | a333f8_1db006ce025c445997197031f7f93c01~mv2.png |
-| Sega | a333f8_10d83e0448c74cde95c5d6798b7d7c80~mv2.jpg |
+Os logos de clientes do site original deixaram de ser usados em 2026-10-30.
 
 ## Informações não publicadas
 

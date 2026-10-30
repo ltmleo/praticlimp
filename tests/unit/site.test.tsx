@@ -37,6 +37,15 @@ describe('home', () => {
     expect(container.textContent).not.toMatch(/pós-obra|vidros|pisos/i);
   });
 
+  it('lista os principais clientes pelo nome', () => {
+    const { container } = render(<App />);
+    expect(container.querySelector('#clientes .eyebrow')).toHaveTextContent('NOSSOS PRINCIPAISCLIENTES.');
+    const names = Array.from(container.querySelectorAll('.client-names li'), li => li.textContent);
+    expect(names).toHaveLength(13);
+    expect(names).toContain('Shopping Via Direta');
+    expect(container.querySelectorAll('#clientes img')).toHaveLength(0);
+  });
+
   it('fecha o menu ao navegar e por Escape, restaurando o foco', async () => {
     const user = userEvent.setup();
     render(<App />);

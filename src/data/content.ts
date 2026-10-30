@@ -17,8 +17,8 @@ export const faq = [
  ['Quais cidades vocês atendem?', "Atendemos Americana, Santa Bárbara d'Oeste e Nova Odessa. Se o seu espaço fica em outra cidade da região, informe o endereço no pedido de orçamento para confirmarmos o atendimento."],
  ['Como peço um orçamento?', 'Informe a cidade, o serviço e um pouco sobre o local. O formulário prepara uma mensagem para você revisar e enviar pelo WhatsApp. Se preferir, ligue para (19) 97416-3336 ou escreva para adm@praticlimp.com.br.'],
 ];
+// Lista informada pelo usuário em 2026-10-30. Grafia não confirmada publicamente: Nova Juliem, Textk, AS Park e Tauá Biodiesel.
 export const clients = [
- {name:'Divelp',file:'divelp.webp'}, {name:'Bandini',file:'bandini.webp'},
- {name:'Metalfarma',file:'metalfarma.webp'}, {name:'Fatex',file:'fatex.webp'},
- {name:'Volcano',file:'volcano.webp'}, {name:'Sega',file:'sega.webp'},
+ 'Tauá Biodiesel', 'Bandini', 'Supermercados Crema', 'Welcome Center', 'Nova Juliem', 'Shopping Via Direta', 'Droga Pires',
+ 'Metalfarma', 'Textk', 'Smart Mall', 'Max Água', 'Contabilidade Giordano', 'AS Park',
 ];
