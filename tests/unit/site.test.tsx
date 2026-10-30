@@ -42,14 +42,15 @@ describe('home', () => {
     const [list, copy] = container.querySelectorAll('.client-track');
     expect(list).toHaveAccessibleName('Principais clientes');
     expect(copy).toHaveAttribute('aria-hidden', 'true');
-    expect(list.querySelectorAll('li')).toHaveLength(11);
+    expect(list.querySelectorAll('li')).toHaveLength(12);
     // Todos têm logo; o Welcome Center mostra o nome abaixo do símbolo, então a imagem é decorativa.
     expect(Array.from(within(list as HTMLElement).getAllByRole('img'), img => img.getAttribute('alt'))).toEqual([
       'Tauá Biodiesel', 'Bandini', 'Supermercados Crema', 'Nova Giulen', 'Shopping Via Direta', 'Droga Pires',
-      'Metalfarma', 'Smart Mall', 'Maxi Água', 'Contabilidade Giordano',
+      'Smart Mall', 'Maxi Água', 'Contabilidade Giordano', 'Associação Médica de Americana', 'Monta Farma',
     ]);
     expect(list).toHaveTextContent('Welcome Center');
-    expect(copy.querySelectorAll('img[alt=""]')).toHaveLength(11);
+    expect(copy.querySelectorAll('img[alt=""]')).toHaveLength(12);
+    expect(container.querySelector('#clientes .section-heading > p')).toHaveTextContent('escritórios e diversos condomínios e consultórios da região');
   });
 
   it('fecha o menu ao navegar e por Escape, restaurando o foco', async () => {
@@ -67,13 +68,17 @@ describe('home', () => {
     expect(toggle).toHaveFocus();
   });
 
-  it('mantém a especialização no primeiro FAQ, com numeração e resposta', () => {
+  it('responde às perguntas de busca no FAQ, com numeração de dois dígitos', () => {
     const { container } = render(<App />);
     const items = container.querySelectorAll('.faq-list details');
-    expect(items).toHaveLength(6);
-    expect(items[0].querySelector('summary')).toHaveTextContent('Por que escolher a Pratic Limp em vez de uma empresa de facilities?');
-    expect(items[0].querySelector('p')).toHaveTextContent('Porque limpeza é a nossa especialidade desde 1991.');
-    expect(items[0].querySelector('p')).toHaveTextContent('as condições de substituição em faltas, férias e afastamentos');
-    expect(Array.from(items, item => item.querySelector('.faq-number')?.textContent)).toEqual(['01','02','03','04','05','06']);
+    const question = (i: number) => items[i].querySelector('summary');
+    expect(items).toHaveLength(10);
+    expect(question(0)).toHaveTextContent('O que é a terceirização de limpeza da Pratic Limp?');
+    expect(items[0].querySelector('p')).toHaveTextContent('substituição em faltas, férias e afastamentos');
+    expect(question(1)).toHaveTextContent('Quais cidades a Pratic Limp atende?');
+    expect(items[1].querySelector('p')).toHaveTextContent("Americana, Santa Bárbara d'Oeste e Nova Odessa");
+    expect(items[2].querySelector('p')).toHaveTextContent('condomínios e consultórios');
+    expect(question(8)).toHaveTextContent('Por que escolher a Pratic Limp em vez de uma empresa de facilities?');
+    expect(Array.from(items, item => item.querySelector('.faq-number')?.textContent)).toEqual(['01','02','03','04','05','06','07','08','09','10']);
   });
 });

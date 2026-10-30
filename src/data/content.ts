@@ -9,22 +9,28 @@ export const benefits = [
  {icon:'spark',title:'Materiais e equipamentos',text:'Produtos e equipamentos para executar o serviço, conforme a proposta.'},
  {icon:'shield',title:'Responsabilidade na contratação',text:'Compromisso com os encargos, benefícios e direitos dos colaboradores.'},
 ];
+// Perguntas de busca, em ordem do genérico ao orçamento. Respostas só com fatos de docs/fontes-e-conteudo.md (sem preço ou prazo).
 export const faq = [
- ['Por que escolher a Pratic Limp em vez de uma empresa de facilities?', 'Porque limpeza é a nossa especialidade desde 1991. Você contrata uma empresa focada em limpeza e conservação, com profissionais treinados para cuidar do seu espaço.\n\nSua proposta define o período de trabalho, os materiais, os equipamentos e as condições de substituição em faltas, férias e afastamentos. Você sabe o que está contratando e conta com uma empresa experiente justamente no serviço de que precisa.'],
- ['Em qual período a equipe trabalha?', 'A terceirização é contratada em período integral. Conte como funciona a sua empresa para alinhar a rotina de limpeza com a equipe.'],
- ['E se o profissional faltar?', 'A Pratic Limp prevê substituições em casos de faltas, férias e afastamentos, ou por solicitação do cliente. Na proposta, confirme como funciona a reposição para o seu local.'],
- ['Materiais e equipamentos estão incluídos?', 'A Pratic Limp trabalha com materiais, produtos e equipamentos para a execução da limpeza. Peça que a proposta detalhe o que está incluído no seu serviço.'],
- ['Quais cidades vocês atendem?', "Atendemos Americana, Santa Bárbara d'Oeste e Nova Odessa. Se o seu espaço fica em outra cidade da região, informe o endereço no pedido de orçamento para confirmarmos o atendimento."],
- ['Como peço um orçamento?', 'Informe a cidade, o serviço e um pouco sobre o local. O formulário prepara uma mensagem para você revisar e enviar pelo WhatsApp. Se preferir, ligue para (19) 97416-3336 ou escreva para adm@praticlimp.com.br.'],
+ ['O que é a terceirização de limpeza da Pratic Limp?', 'É a contratação de uma equipe de limpeza da Pratic Limp para trabalhar no seu espaço em período integral. Os profissionais são treinados e uniformizados, e nós cuidamos da substituição em faltas, férias e afastamentos. Materiais, produtos, equipamentos e demais condições ficam definidos na proposta.'],
+ ['Quais cidades a Pratic Limp atende?', "Atendemos Americana, Santa Bárbara d'Oeste e Nova Odessa, no interior de São Paulo. Se o seu espaço fica em outra cidade da região, informe o endereço no pedido de orçamento para confirmarmos o atendimento."],
+ ['Que tipos de empresa e local vocês atendem?', 'Indústrias, comércios, shoppings e escritórios, além de diversos condomínios e consultórios da região. Conte no pedido de orçamento como é o espaço e a rotina do local para prepararmos a proposta certa.'],
+ ['Quanto custa terceirizar a limpeza?', 'O valor depende do espaço, da rotina de limpeza e do que entra na proposta, por isso cada local recebe um orçamento próprio. Para comparar, lembre que uma equipe própria custa mais que o salário: há encargos e benefícios, férias e 13º, cobertura de ausências, produtos e equipamentos.'],
+ ['Vale mais a pena terceirizar ou contratar uma equipe própria?', 'Depende da sua empresa, mas a comparação justa é com o custo completo, não só com o salário. Na terceirização, a Pratic Limp cuida da equipe, das substituições e dos materiais previstos na proposta, e você acompanha o resultado sem administrar a rotina da limpeza.'],
+ ['E se a profissional faltar ou sair de férias?', 'A Pratic Limp providencia a substituição em faltas, férias e afastamentos, e também quando o cliente pede a troca. Assim a limpeza continua. As condições de reposição para o seu local ficam definidas na proposta.'],
+ ['Materiais, produtos e equipamentos estão incluídos?', 'A Pratic Limp trabalha com materiais, produtos e equipamentos para executar a limpeza. A proposta detalha o que está incluído no seu caso, para você saber exatamente o que está contratando.'],
+ ['Como funciona o contrato?', 'A equipe trabalha em período integral, com contrato de vigência mensal. A Pratic Limp assume o compromisso com os encargos, benefícios e direitos dos colaboradores. Itens incluídos e condições de reposição ficam definidos na proposta.'],
+ ['Por que escolher a Pratic Limp em vez de uma empresa de facilities?', 'Porque limpeza é a nossa especialidade desde 1991. A Pratic Limp se dedica à limpeza e conservação, com profissionais treinados e uniformizados para cuidar do seu espaço, e você contrata uma empresa experiente justamente no serviço de que precisa.'],
+ ['Como peço um orçamento?', 'Preencha o formulário com nome, telefone e cidade e conte um pouco sobre o local. Ele prepara uma mensagem para você revisar e enviar pelo WhatsApp. Se preferir, ligue para (19) 97416-3336 ou escreva para adm@praticlimp.com.br.'],
 ];
-// Lista informada e corrigida pelo usuário em 2026-10-30. Textk e AS Park aguardam confirmação e ficam de fora.
+// Lista informada e corrigida pelo usuário em 2026-10-30; AMA e Monta Farma acrescentados e Metalfarma removido no mesmo dia. Textk e AS Park aguardam confirmação e ficam de fora.
 export const clients: { name: string; logo?: string; showName?: boolean }[] = [
  {name:'Tauá Biodiesel',logo:'clientes/taua-biodiesel.webp'}, {name:'Bandini',logo:'bandini.webp'},
  {name:'Supermercados Crema',logo:'clientes/supermercados-crema.webp'},
  // O logo do Welcome Center é só o símbolo "W"; o nome aparece abaixo dele.
  {name:'Welcome Center',logo:'clientes/welcome-center.webp',showName:true},
  {name:'Nova Giulen',logo:'clientes/nova-giulen.webp'}, {name:'Shopping Via Direta',logo:'clientes/shopping-via-direta.webp'},
- {name:'Droga Pires',logo:'clientes/droga-pires.webp'}, {name:'Metalfarma',logo:'metalfarma.webp'},
+ {name:'Droga Pires',logo:'clientes/droga-pires.webp'},
  {name:'Smart Mall',logo:'clientes/smart-mall.webp'}, {name:'Maxi Água',logo:'clientes/maxi-agua.webp'},
  {name:'Contabilidade Giordano',logo:'clientes/contabilidade-giordano.webp'},
+ {name:'Associação Médica de Americana',logo:'clientes/associacao-medica-de-americana.webp'}, {name:'Monta Farma',logo:'clientes/monta-farma.webp'},
 ];

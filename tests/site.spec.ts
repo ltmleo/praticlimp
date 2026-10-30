@@ -140,7 +140,7 @@ test('native validation, mobile brand, telephone links and Escape',async({page})
   await page.locator('#phone').fill(phone);
   expect(await page.locator('#phone').evaluate((input:HTMLInputElement)=>input.checkValidity())).toBe(phone.length<=13);
  }
- await expect(page.locator('summary').first()).toContainText('Por que escolher a Pratic Limp');
+ await expect(page.locator('summary').first()).toContainText('O que é a terceirização de limpeza');
 });
 
 test('bars animate when visible and respect reduced motion',async({page})=>{

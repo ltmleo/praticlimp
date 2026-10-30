@@ -15,7 +15,7 @@ try {
   // Somente dados confirmados (docs/fontes-e-conteudo.md); o endereço não é publicado.
   const business = {
     '@type': 'LocalBusiness', '@id': site + '#empresa', name: 'Pratic Limp', url: site,
-    description: `Terceirização de limpeza para empresas em ${coverageText}, com cobertura de férias, faltas e afastamentos, no mercado institucional desde 1991.`,
+    description: `Terceirização de limpeza para empresas, condomínios e consultórios em ${coverageText}, com cobertura de férias, faltas e afastamentos, no mercado institucional desde 1991.`,
     logo: site + 'brand/pratic-limp.svg', image: site + 'og-image.png', foundingDate: '1991',
     telephone: company.phoneHref.replace('tel:', ''), email: company.email, sameAs: [company.facebook],
     ...(company.cnpj ? { taxID: company.cnpj } : {}),

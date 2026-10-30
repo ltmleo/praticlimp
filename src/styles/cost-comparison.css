@@ -47,7 +47,7 @@
 .cost-tone-salary{background:#60656a}.cost-tone-charges{background:#7c8186}.cost-tone-vacation{background:#989da1}.cost-tone-coverage{background:#b0b4b7}.cost-tone-supplies{background:#c5c8ca}.cost-tone-other{background:#dadddf}
 /* Decorative proportions only: no prices, rates or measured savings. */
 .cost-segment.cost-tone-salary{flex:42}.cost-segment.cost-tone-charges{flex:18}.cost-segment.cost-tone-vacation{flex:12}.cost-segment.cost-tone-coverage{flex:9}.cost-segment.cost-tone-supplies{flex:11}.cost-segment.cost-tone-other{flex:8}
-.cost-pratic-bar{height:35px;width:62%;border-radius:0 6px 6px 0;background:linear-gradient(100deg,#769d38,#a8c862);box-shadow:0 3px 7px #46652b0d}
+.cost-pratic-bar{height:35px;width:50%;border-radius:0 6px 6px 0;background:linear-gradient(100deg,#769d38,#a8c862);box-shadow:0 3px 7px #46652b0d}
 .cost-chart-legend{display:flex;flex-wrap:wrap;gap:13px 24px;list-style:none;padding:0;margin:24px 0 0;font-size:14px;line-height:1.5;color:#496573}
 .cost-chart-legend li{display:flex;align-items:center;gap:8px}.cost-swatch{display:block;width:11px;height:11px;border-radius:2px;flex-shrink:0}
 .cost-chart-caption{border-top:1px solid #dbe6e5;margin-top:23px;padding-top:18px}

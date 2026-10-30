@@ -33,5 +33,5 @@ const Track = ({ copy = false }: { copy?: boolean }) => (
 );
 
 export default function Clients() {
-  return (<section className="clients-section section" id="clientes"><div className="container"><Reveal className="section-heading"><div><p className="eyebrow">NOSSOS PRINCIPAIS CLIENTES</p><h2>Empresas que contam<br/><span>com a Pratic Limp.</span></h2></div><p>Indústrias, comércios, shoppings e escritórios da região confiam a limpeza à nossa equipe.</p></Reveal></div><div className="client-marquee"><div className="client-rail"><Track/><Track copy/></div></div></section>);
+  return (<section className="clients-section section" id="clientes"><div className="container"><Reveal className="section-heading"><div><p className="eyebrow">NOSSOS PRINCIPAIS CLIENTES</p><h2>Empresas que contam<br/><span>com a Pratic Limp.</span></h2></div><p>Indústrias, comércios, shoppings, escritórios e diversos condomínios e consultórios da região confiam a limpeza à nossa equipe.</p></Reveal></div><div className="client-marquee"><div className="client-rail"><Track/><Track copy/></div></div></section>);
 }
