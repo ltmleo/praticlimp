@@ -43,7 +43,7 @@ describe('home', () => {
     const [list, copy] = container.querySelectorAll('.client-track');
     expect(list).toHaveAccessibleName('Principais clientes');
     expect(copy).toHaveAttribute('aria-hidden', 'true');
-    expect(list.querySelectorAll('li')).toHaveLength(13);
+    expect(list.querySelectorAll('li')).toHaveLength(11);
     expect(within(list as HTMLElement).getByRole('img', { name: 'Bandini' })).toBeInTheDocument();
     expect(list).toHaveTextContent('Shopping Via Direta');
   });
